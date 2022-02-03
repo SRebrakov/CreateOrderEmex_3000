@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/MegaDataLib" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/MegaDataLib" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://emexonline.com:4000/Store.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" />
+  <xs:complexType name="ArrayOfSearchByNumber_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SearchByNumber_Result" nillable="true" type="tns:SearchByNumber_Result" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSearchByNumber_Result" nillable="true" type="tns:ArrayOfSearchByNumber_Result" />
+  <xs:complexType name="SearchByNumber_Result">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q1:ComplexObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Availability" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="DeliveryDays" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Destinations" nillable="true" type="tns:ArrayOfPriceDestination" />
+          <xs:element minOccurs="0" name="DetailNameEng" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DetailNameRus" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DetailNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MakeLogo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MakeName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PackQuantity" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Percent" type="xs:int" />
+          <xs:element minOccurs="0" name="Price" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="PriceDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PriceId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="PriceLogo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WeightGr" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="bitOldNum" type="xs:boolean" />
+          <xs:element minOccurs="0" name="bitOriginal" type="xs:boolean" />
+          <xs:element minOccurs="0" name="bitSameNum" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SearchByNumber_Result" nillable="true" type="tns:SearchByNumber_Result" />
+  <xs:complexType name="ArrayOfPriceDestination">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PriceDestination" nillable="true" type="tns:PriceDestination" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPriceDestination" nillable="true" type="tns:ArrayOfPriceDestination" />
+  <xs:complexType name="PriceDestination">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q2:ComplexObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DestinationId" type="xs:long" />
+          <xs:element minOccurs="0" name="DestinationLogo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Region" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PriceDestination" nillable="true" type="tns:PriceDestination" />
+  <xs:complexType name="ArrayOfSearchDetailTender_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SearchDetailTender_Result" nillable="true" type="tns:SearchDetailTender_Result" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSearchDetailTender_Result" nillable="true" type="tns:ArrayOfSearchDetailTender_Result" />
+  <xs:complexType name="SearchDetailTender_Result">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q3:ComplexObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="MakeName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Price" nillable="true" type="xs:decimal" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SearchDetailTender_Result" nillable="true" type="tns:SearchDetailTender_Result" />
+  <xs:complexType name="BalanceInfo">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q4:ComplexObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Balance" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Credit" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="NewOrder" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Orders" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Total" nillable="true" type="xs:decimal" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BalanceInfo" nillable="true" type="tns:BalanceInfo" />
+  <xs:complexType name="OrderInfo">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q5:ComplexObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Amount" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="AmountOrder" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Lines" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="LinesOrder" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="NumNextOrder" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Quantity" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="QuantityOrder" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Weight" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="WeightOrder" nillable="true" type="xs:decimal" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OrderInfo" nillable="true" type="tns:OrderInfo" />
+  <xs:complexType name="ArrayOfBasketItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BasketItem" nillable="true" type="tns:BasketItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBasketItem" nillable="true" type="tns:ArrayOfBasketItem" />
+  <xs:complexType name="BasketItem">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q6:ComplexObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BasketItemId" type="xs:long" />
+          <xs:element minOccurs="0" name="CoeffMaxAgree" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Comments" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CustomerId" type="xs:long" />
+          <xs:element minOccurs="0" name="CustomerSubId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Date_Add" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DestinationLogo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Destinations" nillable="true" type="tns:ArrayOfPriceDestination" />
+          <xs:element minOccurs="0" name="DetailId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="DetailNameEng" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DetailNameRus" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DetailNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MakeLogo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MakeName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PackQuantity" type="xs:int" />
+          <xs:element minOccurs="0" name="Price" type="xs:decimal" />
+          <xs:element minOccurs="0" name="PriceLogo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PriceMega" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Quantity" type="xs:int" />
+          <xs:element minOccurs="0" name="Reference" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SubCustomerId" type="xs:long" />
+          <xs:element minOccurs="0" name="SubCustomerPrice" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SubcustomerLogo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UploadedPrice" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Weight" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="bitAGREE" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="bitBrand" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="bitConfirm" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="bitONLY" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="bitQuantity" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="bitWait" nillable="true" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BasketItem" nillable="true" type="tns:BasketItem" />
+  <xs:complexType name="MakeQuotation_Result">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q7="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q7:ComplexObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Availability" type="xs:int" />
+          <xs:element minOccurs="0" name="DeliveryDays" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="DetailNameEng" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DetailNameRus" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DetailNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MakeLogo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MakeName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PackQuantity" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Percent" type="xs:int" />
+          <xs:element minOccurs="0" name="Price" type="xs:decimal" />
+          <xs:element minOccurs="0" name="PriceDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PriceId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="PriceLogo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WeightGr" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="bitOldNum" type="xs:boolean" />
+          <xs:element minOccurs="0" name="bitOriginal" type="xs:boolean" />
+          <xs:element minOccurs="0" name="bitSameNum" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MakeQuotation_Result" nillable="true" type="tns:MakeQuotation_Result" />
+  <xs:complexType name="MakeInfo">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q8="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q8:ComplexObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MakeLogo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MakeName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProductCatalog" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProductDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProductInfo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProductWebsite" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MakeInfo" nillable="true" type="tns:MakeInfo" />
+  <xs:complexType name="ArrayOfMakeInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MakeInfo" nillable="true" type="tns:MakeInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMakeInfo" nillable="true" type="tns:ArrayOfMakeInfo" />
+</xs:schema>

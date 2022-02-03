@@ -1,0 +1,77 @@
+2016-11-14 21:04:35.2443 CreateOrderEmex.MainForm Finish
+2016-11-14 21:11:13.0412 CreateOrderEmex.MainForm Start
+2016-11-14 21:11:14.6975 CreateOrderEmex.MainForm . ResultCode=0
+2016-11-14 21:11:16.3537 CreateOrderEmex.MainForm . ResultCode=0
+2016-11-14 21:11:18.0412 CreateOrderEmex.MainForm . ResultCode=0
+2016-11-14 21:11:19.7131 CreateOrderEmex.MainForm . ResultCode=0
+2016-11-14 21:11:21.3537 CreateOrderEmex.MainForm . ResultCode=0
+2016-11-14 21:11:22.9943 CreateOrderEmex.MainForm . ResultCode=0
+2016-11-14 21:11:24.6818 CreateOrderEmex.MainForm . ResultCode=0
+2016-11-14 21:11:25.0100 CreateOrderEmex.MainForm Finish
+2016-11-14 21:20:33.0412 CreateOrderEmex.MainForm Start
+2016-11-14 21:20:58.3381 CreateOrderEmex.MainForm OrderNumber = 51
+2016-11-14 21:20:58.3381 CreateOrderEmex.MainForm OrderNumber = 51. ResultCode=0
+2016-11-14 21:21:22.6350 CreateOrderEmex.MainForm OrderNumber = 52
+2016-11-14 21:21:22.6350 CreateOrderEmex.MainForm OrderNumber = 52. ResultCode=0
+2016-11-14 21:21:47.2131 CreateOrderEmex.MainForm OrderNumber = 53
+2016-11-14 21:21:47.2131 CreateOrderEmex.MainForm OrderNumber = 53. ResultCode=0
+2016-11-14 21:22:11.8381 CreateOrderEmex.MainForm OrderNumber = 54
+2016-11-14 21:22:11.8537 CreateOrderEmex.MainForm OrderNumber = 54. ResultCode=0
+2016-11-14 21:22:36.2756 CreateOrderEmex.MainForm OrderNumber = 55
+2016-11-14 21:22:36.2756 CreateOrderEmex.MainForm OrderNumber = 55. ResultCode=0
+2016-11-14 21:23:01.0412 CreateOrderEmex.MainForm OrderNumber = 56
+2016-11-14 21:23:01.0412 CreateOrderEmex.MainForm OrderNumber = 56. ResultCode=0
+2016-11-14 21:23:15.2600 CreateOrderEmex.MainForm OrderNumber = 57
+2016-11-14 21:23:15.2600 CreateOrderEmex.MainForm OrderNumber = 57. ResultCode=0
+2016-11-14 21:23:15.6037 CreateOrderEmex.MainForm Finish
+2016-11-14 22:41:08.8057 CreateOrderEmex.MainForm Start
+2016-11-14 22:41:23.3797 CreateOrderEmex.MainForm При установлении соединения с SQL Server произошла ошибка, связанная с сетью или с определенным экземпляром. Сервер не найден или недоступен. Убедитесь, что имя экземпляра указано правильно и что на SQL Server разрешены удаленные соединения. (provider: Named Pipes Provider, error: 40 - Не удалось открыть подключение к SQL Server)
+2016-11-14 22:41:23.3852 CreateOrderEmex.MainForm Finish
+2016-11-14 22:41:37.9161 CreateOrderEmex.MainForm Start
+2016-11-14 22:42:59.2141 CreateOrderEmex.MainForm Start
+2016-11-14 22:43:16.5993 CreateOrderEmex.MainForm Start
+2016-11-14 22:44:37.5585 CreateOrderEmex.MainForm Start
+2016-11-14 22:45:22.6156 CreateOrderEmex.MainForm Ссылка на объект не указывает на экземпляр объекта.
+2016-11-14 22:45:52.8464 CreateOrderEmex.MainForm Incorrect syntax near ','.
+2016-11-14 22:47:02.6961 CreateOrderEmex.MainForm Start
+2016-11-14 22:48:27.0042 CreateOrderEmex.MainForm Start
+2016-11-14 22:48:38.3868 CreateOrderEmex.MainForm Finish
+2016-11-14 22:57:53.8038 CreateOrderEmex.MainForm Start
+2016-11-14 22:57:59.5646 CreateOrderEmex.MainForm Finish
+2016-11-14 22:58:02.6922 CreateOrderEmex.MainForm Start
+2016-11-14 22:58:02.8768 CreateOrderEmex.MainForm Finish
+2016-11-21 10:51:33.5347 CreateOrderEmex.MainForm Start
+2016-11-21 10:52:29.5535 CreateOrderEmex.MainForm Start
+2016-11-21 10:53:13.8560 CreateOrderEmex.MainForm Start
+2016-11-21 10:54:54.5256 CreateOrderEmex.MainForm Прослушивание на http://74.100.71.234/MegaServices/Store.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
+2016-11-21 10:55:12.6670 CreateOrderEmex.MainForm Finish
+2016-11-21 10:55:16.8395 CreateOrderEmex.MainForm Start
+2016-11-21 11:08:22.1807 CreateOrderEmex.MainForm Start
+2016-11-21 11:09:12.5400 CreateOrderEmex.MainForm Start
+2016-12-27 21:25:15.1271 CreateOrderEmex.MainForm Start
+2016-12-27 21:26:18.9080 CreateOrderEmex.MainForm Start
+2016-12-27 21:27:57.9974 CreateOrderEmex.MainForm Start
+2016-12-27 21:29:41.9523 CreateOrderEmex.MainForm Start
+2016-12-27 21:31:53.3353 CreateOrderEmex.MainForm Start
+2016-12-27 21:32:49.8388 CreateOrderEmex.MainForm Start
+2016-12-27 21:33:49.1580 CreateOrderEmex.MainForm Start
+2016-12-27 21:35:45.2599 CreateOrderEmex.MainForm Start
+2016-12-27 21:37:28.5824 CreateOrderEmex.MainForm Start
+2016-12-27 21:47:16.8041 CreateOrderEmex.MainForm Start
+2016-12-27 21:49:37.3947 CreateOrderEmex.MainForm UpdateBasket: BasketItemId=11601261 Quantity=7 DestinationLogo=CNTE bitONLY=False bitAGREE=False bitWait=False bitConfirm=True bitBrand=False Reference=44905 CustomerSubId=81226961 Comments= CoeffMaxAgree=1,0200 UploadedPrice=1,14
+2016-12-27 21:50:04.2791 CreateOrderEmex.MainForm UpdateBasket: BasketItemId=11601262 Quantity=4 DestinationLogo=CNTE bitONLY=False bitAGREE=False bitWait=False bitConfirm=True bitBrand=False Reference=44912 CustomerSubId=81226968 Comments= CoeffMaxAgree=1,0200 UploadedPrice=0,88
+2016-12-27 22:07:43.8952 CreateOrderEmex.MainForm Start
+2016-12-27 22:07:59.4425 CreateOrderEmex.MainForm UpdateBasket: BasketItemId=11601286 Quantity=7 DestinationLogo=CNTE bitONLY=False bitAGREE=False bitWait=False bitConfirm=True bitBrand=False Reference=44905 CustomerSubId=81226961 Comments= CoeffMaxAgree=1,0200 UploadedPrice=1,14
+2016-12-27 22:07:59.8800 CreateOrderEmex.MainForm UpdateBasket: BasketItemId=11601287 Quantity=4 DestinationLogo=CNTE bitONLY=False bitAGREE=False bitWait=False bitConfirm=True bitBrand=False Reference=44912 CustomerSubId=81226968 Comments= CoeffMaxAgree=1,0200 UploadedPrice=0,88
+2016-12-27 22:09:02.3438 CreateOrderEmex.MainForm OrderNumber = 366
+2016-12-27 22:09:15.9435 CreateOrderEmex.MainForm OrderNumber = 366. ResultCode=0
+2016-12-27 22:09:40.0941 CreateOrderEmex.MainForm UpdateBasket: BasketItemId=11601288 Quantity=2 DestinationLogo=EMEW bitONLY=False bitAGREE=False bitWait=False bitConfirm=True bitBrand=False Reference=45078 CustomerSubId=81242275 Comments= CoeffMaxAgree=1,0200 UploadedPrice=2,89
+2016-12-27 22:09:40.5096 CreateOrderEmex.MainForm UpdateBasket: BasketItemId=11601289 Quantity=1 DestinationLogo=EMEW bitONLY=False bitAGREE=False bitWait=False bitConfirm=True bitBrand=False Reference=45079 CustomerSubId=81242276 Comments= CoeffMaxAgree=1,0200 UploadedPrice=2,89
+2016-12-27 22:09:40.9407 CreateOrderEmex.MainForm UpdateBasket: BasketItemId=11601290 Quantity=1 DestinationLogo=EMEW bitONLY=False bitAGREE=False bitWait=False bitConfirm=True bitBrand=False Reference=45080 CustomerSubId=81240871 Comments= CoeffMaxAgree=1,0200 UploadedPrice=14,86
+2016-12-27 22:09:51.6146 CreateOrderEmex.MainForm OrderNumber = 367
+2016-12-27 22:09:51.6146 CreateOrderEmex.MainForm OrderNumber = 367. ResultCode=0
+2016-12-27 22:09:52.0302 CreateOrderEmex.MainForm Finish
+2016-12-27 22:14:57.8093 CreateOrderEmex.MainForm Start
+2016-12-27 22:14:57.9935 CreateOrderEmex.MainForm Finish
+2017-01-19 14:25:41.9727 CreateOrderEmex.MainForm Start
+2017-01-19 14:27:43.2593 CreateOrderEmex.MainForm Start

@@ -1,0 +1,7 @@
+2012-07-11 09:27:40.5127 CreateOrderEmex.MainForm Start
+2012-07-11 09:28:14.5735 CreateOrderEmex.MainForm SQL Server blocked access to procedure 'dbo.sp_send_dbmail' of component 'Database Mail XPs' because this component is turned off as part of the security configuration for this server. A system administrator can enable the use of 'Database Mail XPs' by using sp_configure. For more information about enabling 'Database Mail XPs', see "Surface Area Configuration" in SQL Server Books Online. 
+2012-07-11 09:29:17.4879 CreateOrderEmex.MainForm Finish
+2012-12-06 15:08:21.6105 CreateOrderEmex.MainForm Start
+2012-12-06 15:10:52.0191 CreateOrderEmex.MainForm Finish
+2012-12-06 15:11:06.0920 CreateOrderEmex.MainForm Start
+2012-12-06 15:13:29.3661 CreateOrderEmex.MainForm Finish

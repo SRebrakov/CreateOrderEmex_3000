@@ -1,0 +1,5 @@
+C:\EMEX\CreateOrderEmex\Logger\bin\Debug\Logger.dll
+C:\EMEX\CreateOrderEmex\Logger\bin\Debug\Logger.pdb
+C:\EMEX\CreateOrderEmex\Logger\obj\Debug\ResolveAssemblyReference.cache
+C:\EMEX\CreateOrderEmex\Logger\obj\Debug\Logger.dll
+C:\EMEX\CreateOrderEmex\Logger\obj\Debug\Logger.pdb

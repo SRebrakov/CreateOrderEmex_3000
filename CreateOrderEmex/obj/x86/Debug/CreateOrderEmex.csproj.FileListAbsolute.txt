@@ -1,0 +1,24 @@
+C:\Users\Sergey\Documents\Visual Studio 2010\Projects\WindowsFormsApplication3\WindowsFormsApplication3\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Sergey\Documents\Visual Studio 2010\Projects\WindowsFormsApplication3\WindowsFormsApplication3\obj\x86\Debug\WindowsFormsApplication3.Form1.resources
+C:\Users\Sergey\Documents\Visual Studio 2010\Projects\WindowsFormsApplication3\WindowsFormsApplication3\obj\x86\Debug\CreateOrderEmex.Properties.Resources.resources
+C:\Users\Sergey\Documents\Visual Studio 2010\Projects\WindowsFormsApplication3\WindowsFormsApplication3\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Sergey\Documents\Visual Studio 2010\Projects\WindowsFormsApplication3\WindowsFormsApplication3\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\EMEX\CreateOrderEmex\bin\Debug\WindowsFormsApplication3.exe.config
+C:\EMEX\CreateOrderEmex\obj\x86\Debug\WindowsFormsApplication3.exe
+C:\EMEX\CreateOrderEmex\obj\x86\Debug\WindowsFormsApplication3.pdb
+C:\EMEX\CreateOrderEmex\CreateOrderEmex\obj\x86\Debug\CreateOrderEmex.MainForm.resources
+C:\EMEX\CreateOrderEmex\CreateOrderEmex\bin\Debug\CreateOrderEmex.exe.config
+C:\EMEX\CreateOrderEmex\CreateOrderEmex\bin\Debug\CreateOrderEmex.exe
+C:\EMEX\CreateOrderEmex\CreateOrderEmex\bin\Debug\CreateOrderEmex.pdb
+C:\EMEX\CreateOrderEmex\CreateOrderEmex\obj\x86\Debug\CreateOrderEmex.Properties.Resources.resources
+C:\EMEX\CreateOrderEmex\CreateOrderEmex\obj\x86\Debug\CreateOrderEmex.exe
+C:\EMEX\CreateOrderEmex\CreateOrderEmex\obj\x86\Debug\CreateOrderEmex.pdb
+C:\EMEX\CreateOrderEmex\CreateOrderEmex\bin\Debug\NLog.dll
+C:\EMEX\CreateOrderEmex\CreateOrderEmex\bin\Debug\NLog.xml
+C:\EMEX\CreateOrderEmex\CreateOrderEmex\bin\Debug\NLog.config
+C:\EMEX\CreateOrderEmex\EMEXUAEB\CreateOrderEmex.exe.config
+C:\EMEX\CreateOrderEmex\EMEXUAEB\NLog.config
+C:\EMEX\CreateOrderEmex\EMEXUAEB\CreateOrderEmex.exe
+C:\EMEX\CreateOrderEmex\EMEXUAEB\CreateOrderEmex.pdb
+C:\EMEX\CreateOrderEmex\CreateOrderEmex\obj\x86\Debug\CreateOrderEmex.csproj.GenerateResource.Cache
+C:\EMEX\CreateOrderEmex\CreateOrderEmex\obj\x86\Debug\CreateOrderEmex.csprojResolveAssemblyReference.cache

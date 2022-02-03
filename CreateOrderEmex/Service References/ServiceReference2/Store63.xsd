@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://emexonline.com:4000/Store.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/MegaDataLib" />
+  <xs:import schemaLocation="http://emexonline.com:4000/Store.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://emexonline.com:4000/Store.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/MegaApi.BO" />
+  <xs:element name="echo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="echo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="echoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="echoResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsAuth">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsAuthResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IsAuthResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchByNumber">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="detailNum" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="showSubstitution" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchByNumberResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/MegaDataLib" minOccurs="0" name="SearchByNumberResult" nillable="true" type="q1:ArrayOfSearchByNumber_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchDetailTender">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="detailNum" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchDetailTenderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/MegaDataLib" minOccurs="0" name="SearchDetailTenderResult" nillable="true" type="q2:ArrayOfSearchDetailTender_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBalanceInfo">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBalanceInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/MegaDataLib" minOccurs="0" name="GetBalanceInfoResult" nillable="true" type="q3:BalanceInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSamePartNums">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="detailNum" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSamePartNumsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetSamePartNumsResult" nillable="true" type="q4:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrderInfo">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrderInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/MegaDataLib" minOccurs="0" name="GetOrderInfoResult" nillable="true" type="q5:OrderInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBasket">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBasketResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/MegaDataLib" minOccurs="0" name="GetBasketResult" nillable="true" type="q6:ArrayOfBasketItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertToBasket">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="detailNum" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="makeLogo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="quantity" type="xs:int" />
+        <xs:element minOccurs="0" name="priceLogo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="destinationLogo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reference" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="customerSubId" type="xs:long" />
+        <xs:element minOccurs="0" name="comments" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bitWait" type="xs:boolean" />
+        <xs:element minOccurs="0" name="bitConfirm" type="xs:boolean" />
+        <xs:element minOccurs="0" name="bitAGREE" type="xs:boolean" />
+        <xs:element minOccurs="0" name="bitBrand" type="xs:boolean" />
+        <xs:element minOccurs="0" name="bitONLY" type="xs:boolean" />
+        <xs:element minOccurs="0" name="coeffMaxAgree" type="xs:decimal" />
+        <xs:element minOccurs="0" name="uploadedPrice" type="xs:decimal" />
+        <xs:element minOccurs="0" name="transportPackLogo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="subCustomerName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="customerOrderNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="customerStickerData" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertToBasketResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertBasketItemsToBasket">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/MegaApi.BO" minOccurs="0" name="basketItems" nillable="true" type="q7:ArrayOfInsertToBasketItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertBasketItemsToBasketResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateBasket">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="basketItemId" type="xs:long" />
+        <xs:element minOccurs="0" name="quantity" type="xs:int" />
+        <xs:element minOccurs="0" name="destinationLogo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bitONLY" type="xs:boolean" />
+        <xs:element minOccurs="0" name="bitAgree" type="xs:boolean" />
+        <xs:element minOccurs="0" name="bitWait" type="xs:boolean" />
+        <xs:element minOccurs="0" name="bitConfirm" type="xs:boolean" />
+        <xs:element minOccurs="0" name="bitBrand" type="xs:boolean" />
+        <xs:element minOccurs="0" name="reference" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="customerSubId" type="xs:long" />
+        <xs:element minOccurs="0" name="comments" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="coeffMaxAgree" type="xs:decimal" />
+        <xs:element minOccurs="0" name="uploadedPrice" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateBasketResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteFromBasket">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="basketItemId" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteFromBasketResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EmptyBasket">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EmptyBasketResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AllToOrderBasket">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AllToOrderBasketResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MakeQuotation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/MegaApi.BO" minOccurs="0" name="preQuotationItems" nillable="true" type="q8:ArrayOfPreQuotationItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MakeQuotationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/MegaApi.BO" minOccurs="0" name="MakeQuotationResult" nillable="true" type="q9:ArrayOfQuotationItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMakeInfoByMakeLogo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="makeLogo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMakeInfoByMakeLogoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/MegaDataLib" minOccurs="0" name="GetMakeInfoByMakeLogoResult" nillable="true" type="q10:MakeInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMakeInfoList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bitOriginal" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMakeInfoListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/MegaDataLib" minOccurs="0" name="GetMakeInfoListResult" nillable="true" type="q11:ArrayOfMakeInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateOrder">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateOrderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/MegaApi.BO" minOccurs="0" name="CreateOrderResult" nillable="true" type="q12:CreateOrder_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

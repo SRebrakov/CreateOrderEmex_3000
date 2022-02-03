@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="StoreApi" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://emexonline.com:4000/Store.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://emexonline.com:4000/Store.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://emexonline.com:4000/Store.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/MegaDataLib" />
+      <xsd:import schemaLocation="http://emexonline.com:4000/Store.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" />
+      <xsd:import schemaLocation="http://emexonline.com:4000/Store.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://emexonline.com:4000/Store.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/MegaApi.BO" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="StoreApi_echo_InputMessage">
+    <wsdl:part name="parameters" element="tns:echo" />
+  </wsdl:message>
+  <wsdl:message name="StoreApi_echo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:echoResponse" />
+  </wsdl:message>
+  <wsdl:message name="StoreApi_IsAuth_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsAuth" />
+  </wsdl:message>
+  <wsdl:message name="StoreApi_IsAuth_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsAuthResponse" />
+  </wsdl:message>
+  <wsdl:message name="StoreApi_SearchByNumber_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchByNumber" />
+  </wsdl:message>
+  <wsdl:message name="StoreApi_SearchByNumber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchByNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="StoreApi_SearchDetailTender_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchDetailTender" />
+  </wsdl:message>
+  <wsdl:message name="StoreApi_SearchDetailTender_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchDetailTenderResponse" />
+  </wsdl:message>
+  <wsdl:message name="StoreApi_GetBalanceInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBalanceInfo" />
+  </wsdl:message>
+  <wsdl:message name="StoreApi_GetBalanceInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBalanceInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="StoreApi_GetSamePartNums_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSamePartNums" />
+  </wsdl:message>
+  <wsdl:message name="StoreApi_GetSamePartNums_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSamePartNumsResponse" />
+  </wsdl:message>
+  <wsdl:message name="StoreApi_GetOrderInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderInfo" />
+  </wsdl:message>
+  <wsdl:message name="StoreApi_GetOrderInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="StoreApi_GetBasket_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBasket" />
+  </wsdl:message>
+  <wsdl:message name="StoreApi_GetBasket_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBasketResponse" />
+  </wsdl:message>
+  <wsdl:message name="StoreApi_InsertToBasket_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertToBasket" />
+  </wsdl:message>
+  <wsdl:message name="StoreApi_InsertToBasket_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertToBasketResponse" />
+  </wsdl:message>
+  <wsdl:message name="StoreApi_InsertBasketItemsToBasket_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertBasketItemsToBasket" />
+  </wsdl:message>
+  <wsdl:message name="StoreApi_InsertBasketItemsToBasket_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertBasketItemsToBasketResponse" />
+  </wsdl:message>
+  <wsdl:message name="StoreApi_UpdateBasket_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateBasket" />
+  </wsdl:message>
+  <wsdl:message name="StoreApi_UpdateBasket_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateBasketResponse" />
+  </wsdl:message>
+  <wsdl:message name="StoreApi_DeleteFromBasket_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteFromBasket" />
+  </wsdl:message>
+  <wsdl:message name="StoreApi_DeleteFromBasket_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteFromBasketResponse" />
+  </wsdl:message>
+  <wsdl:message name="StoreApi_EmptyBasket_InputMessage">
+    <wsdl:part name="parameters" element="tns:EmptyBasket" />
+  </wsdl:message>
+  <wsdl:message name="StoreApi_EmptyBasket_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EmptyBasketResponse" />
+  </wsdl:message>
+  <wsdl:message name="StoreApi_AllToOrderBasket_InputMessage">
+    <wsdl:part name="parameters" element="tns:AllToOrderBasket" />
+  </wsdl:message>
+  <wsdl:message name="StoreApi_AllToOrderBasket_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AllToOrderBasketResponse" />
+  </wsdl:message>
+  <wsdl:message name="StoreApi_MakeQuotation_InputMessage">
+    <wsdl:part name="parameters" element="tns:MakeQuotation" />
+  </wsdl:message>
+  <wsdl:message name="StoreApi_MakeQuotation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MakeQuotationResponse" />
+  </wsdl:message>
+  <wsdl:message name="StoreApi_GetMakeInfoByMakeLogo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMakeInfoByMakeLogo" />
+  </wsdl:message>
+  <wsdl:message name="StoreApi_GetMakeInfoByMakeLogo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMakeInfoByMakeLogoResponse" />
+  </wsdl:message>
+  <wsdl:message name="StoreApi_GetMakeInfoList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMakeInfoList" />
+  </wsdl:message>
+  <wsdl:message name="StoreApi_GetMakeInfoList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMakeInfoListResponse" />
+  </wsdl:message>
+  <wsdl:message name="StoreApi_CreateOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateOrder" />
+  </wsdl:message>
+  <wsdl:message name="StoreApi_CreateOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateOrderResponse" />
+  </wsdl:message>
+  <wsdl:portType name="StoreApi">
+    <wsdl:operation name="echo">
+      <wsdl:input wsaw:Action="http://tempuri.org/StoreApi/echo" message="tns:StoreApi_echo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/StoreApi/echoResponse" message="tns:StoreApi_echo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsAuth">
+      <wsdl:input wsaw:Action="http://tempuri.org/StoreApi/IsAuth" message="tns:StoreApi_IsAuth_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/StoreApi/IsAuthResponse" message="tns:StoreApi_IsAuth_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchByNumber">
+      <wsdl:input wsaw:Action="http://tempuri.org/StoreApi/SearchByNumber" message="tns:StoreApi_SearchByNumber_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/StoreApi/SearchByNumberResponse" message="tns:StoreApi_SearchByNumber_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchDetailTender">
+      <wsdl:input wsaw:Action="http://tempuri.org/StoreApi/SearchDetailTender" message="tns:StoreApi_SearchDetailTender_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/StoreApi/SearchDetailTenderResponse" message="tns:StoreApi_SearchDetailTender_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBalanceInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/StoreApi/GetBalanceInfo" message="tns:StoreApi_GetBalanceInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/StoreApi/GetBalanceInfoResponse" message="tns:StoreApi_GetBalanceInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSamePartNums">
+      <wsdl:input wsaw:Action="http://tempuri.org/StoreApi/GetSamePartNums" message="tns:StoreApi_GetSamePartNums_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/StoreApi/GetSamePartNumsResponse" message="tns:StoreApi_GetSamePartNums_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/StoreApi/GetOrderInfo" message="tns:StoreApi_GetOrderInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/StoreApi/GetOrderInfoResponse" message="tns:StoreApi_GetOrderInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBasket">
+      <wsdl:input wsaw:Action="http://tempuri.org/StoreApi/GetBasket" message="tns:StoreApi_GetBasket_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/StoreApi/GetBasketResponse" message="tns:StoreApi_GetBasket_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertToBasket">
+      <wsdl:input wsaw:Action="http://tempuri.org/StoreApi/InsertToBasket" message="tns:StoreApi_InsertToBasket_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/StoreApi/InsertToBasketResponse" message="tns:StoreApi_InsertToBasket_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertBasketItemsToBasket">
+      <wsdl:input wsaw:Action="http://tempuri.org/StoreApi/InsertBasketItemsToBasket" message="tns:StoreApi_InsertBasketItemsToBasket_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/StoreApi/InsertBasketItemsToBasketResponse" message="tns:StoreApi_InsertBasketItemsToBasket_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBasket">
+      <wsdl:input wsaw:Action="http://tempuri.org/StoreApi/UpdateBasket" message="tns:StoreApi_UpdateBasket_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/StoreApi/UpdateBasketResponse" message="tns:StoreApi_UpdateBasket_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFromBasket">
+      <wsdl:input wsaw:Action="http://tempuri.org/StoreApi/DeleteFromBasket" message="tns:StoreApi_DeleteFromBasket_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/StoreApi/DeleteFromBasketResponse" message="tns:StoreApi_DeleteFromBasket_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EmptyBasket">
+      <wsdl:input wsaw:Action="http://tempuri.org/StoreApi/EmptyBasket" message="tns:StoreApi_EmptyBasket_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/StoreApi/EmptyBasketResponse" message="tns:StoreApi_EmptyBasket_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AllToOrderBasket">
+      <wsdl:input wsaw:Action="http://tempuri.org/StoreApi/AllToOrderBasket" message="tns:StoreApi_AllToOrderBasket_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/StoreApi/AllToOrderBasketResponse" message="tns:StoreApi_AllToOrderBasket_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MakeQuotation">
+      <wsdl:input wsaw:Action="http://tempuri.org/StoreApi/MakeQuotation" message="tns:StoreApi_MakeQuotation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/StoreApi/MakeQuotationResponse" message="tns:StoreApi_MakeQuotation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMakeInfoByMakeLogo">
+      <wsdl:input wsaw:Action="http://tempuri.org/StoreApi/GetMakeInfoByMakeLogo" message="tns:StoreApi_GetMakeInfoByMakeLogo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/StoreApi/GetMakeInfoByMakeLogoResponse" message="tns:StoreApi_GetMakeInfoByMakeLogo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMakeInfoList">
+      <wsdl:input wsaw:Action="http://tempuri.org/StoreApi/GetMakeInfoList" message="tns:StoreApi_GetMakeInfoList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/StoreApi/GetMakeInfoListResponse" message="tns:StoreApi_GetMakeInfoList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/StoreApi/CreateOrder" message="tns:StoreApi_CreateOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/StoreApi/CreateOrderResponse" message="tns:StoreApi_CreateOrder_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="userHttp_StoreApi" type="tns:StoreApi">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="echo">
+      <soap:operation soapAction="http://tempuri.org/StoreApi/echo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsAuth">
+      <soap:operation soapAction="http://tempuri.org/StoreApi/IsAuth" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchByNumber">
+      <soap:operation soapAction="http://tempuri.org/StoreApi/SearchByNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchDetailTender">
+      <soap:operation soapAction="http://tempuri.org/StoreApi/SearchDetailTender" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBalanceInfo">
+      <soap:operation soapAction="http://tempuri.org/StoreApi/GetBalanceInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSamePartNums">
+      <soap:operation soapAction="http://tempuri.org/StoreApi/GetSamePartNums" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderInfo">
+      <soap:operation soapAction="http://tempuri.org/StoreApi/GetOrderInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBasket">
+      <soap:operation soapAction="http://tempuri.org/StoreApi/GetBasket" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertToBasket">
+      <soap:operation soapAction="http://tempuri.org/StoreApi/InsertToBasket" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertBasketItemsToBasket">
+      <soap:operation soapAction="http://tempuri.org/StoreApi/InsertBasketItemsToBasket" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBasket">
+      <soap:operation soapAction="http://tempuri.org/StoreApi/UpdateBasket" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFromBasket">
+      <soap:operation soapAction="http://tempuri.org/StoreApi/DeleteFromBasket" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmptyBasket">
+      <soap:operation soapAction="http://tempuri.org/StoreApi/EmptyBasket" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AllToOrderBasket">
+      <soap:operation soapAction="http://tempuri.org/StoreApi/AllToOrderBasket" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MakeQuotation">
+      <soap:operation soapAction="http://tempuri.org/StoreApi/MakeQuotation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMakeInfoByMakeLogo">
+      <soap:operation soapAction="http://tempuri.org/StoreApi/GetMakeInfoByMakeLogo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMakeInfoList">
+      <soap:operation soapAction="http://tempuri.org/StoreApi/GetMakeInfoList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrder">
+      <soap:operation soapAction="http://tempuri.org/StoreApi/CreateOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="StoreApi">
+    <wsdl:port name="userHttp_StoreApi" binding="tns:userHttp_StoreApi">
+      <soap:address location="http://emexonline.com:4000/Store.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

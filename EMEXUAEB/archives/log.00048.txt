@@ -1,0 +1,136 @@
+2016-09-30 12:03:06.4225 CreateOrderEmex.MainForm Error CreateOrder. ResultCode=-4
+2016-09-30 12:03:32.0475 CreateOrderEmex.MainForm Error CreateOrder. ResultCode=-4
+2016-09-30 12:03:48.8444 CreateOrderEmex.MainForm Error CreateOrder. ResultCode=-4
+2016-09-30 12:03:49.2194 CreateOrderEmex.MainForm Finish
+2016-09-30 12:18:52.7506 CreateOrderEmex.MainForm Start
+2016-09-30 12:19:19.0319 CreateOrderEmex.MainForm OrderNumber = 238
+2016-09-30 12:19:19.0319 CreateOrderEmex.MainForm OrderNumber = 238. ResultCode=0
+2016-09-30 12:19:45.0631 CreateOrderEmex.MainForm OrderNumber = 239
+2016-09-30 12:19:45.0631 CreateOrderEmex.MainForm OrderNumber = 239. ResultCode=0
+2016-09-30 12:20:10.4850 CreateOrderEmex.MainForm OrderNumber = 240
+2016-09-30 12:20:10.4850 CreateOrderEmex.MainForm OrderNumber = 240. ResultCode=0
+2016-09-30 12:20:35.9694 CreateOrderEmex.MainForm OrderNumber = 241
+2016-09-30 12:20:35.9694 CreateOrderEmex.MainForm OrderNumber = 241. ResultCode=0
+2016-09-30 12:21:01.8756 CreateOrderEmex.MainForm OrderNumber = 242
+2016-09-30 12:21:01.8756 CreateOrderEmex.MainForm OrderNumber = 242. ResultCode=0
+2016-09-30 12:21:26.9694 CreateOrderEmex.MainForm OrderNumber = 243
+2016-09-30 12:21:26.9694 CreateOrderEmex.MainForm OrderNumber = 243. ResultCode=0
+2016-09-30 12:21:52.1100 CreateOrderEmex.MainForm OrderNumber = 244
+2016-09-30 12:21:52.1100 CreateOrderEmex.MainForm OrderNumber = 244. ResultCode=0
+2016-09-30 12:22:17.6569 CreateOrderEmex.MainForm OrderNumber = 245
+2016-09-30 12:22:17.6569 CreateOrderEmex.MainForm OrderNumber = 245. ResultCode=0
+2016-09-30 12:22:42.7819 CreateOrderEmex.MainForm OrderNumber = 246
+2016-09-30 12:22:42.7819 CreateOrderEmex.MainForm OrderNumber = 246. ResultCode=0
+2016-09-30 12:23:08.0163 CreateOrderEmex.MainForm OrderNumber = 247
+2016-09-30 12:23:08.0163 CreateOrderEmex.MainForm OrderNumber = 247. ResultCode=0
+2016-09-30 12:23:24.1256 CreateOrderEmex.MainForm OrderNumber = 248
+2016-09-30 12:23:24.1256 CreateOrderEmex.MainForm OrderNumber = 248. ResultCode=0
+2016-09-30 12:23:24.5319 CreateOrderEmex.MainForm Finish
+2016-09-30 14:30:00.2819 CreateOrderEmex.MainForm Start
+2016-09-30 14:30:00.3288 CreateOrderEmex.MainForm Object reference not set to an instance of an object.
+2016-09-30 14:30:00.3288 CreateOrderEmex.MainForm Incorrect syntax near ','.
+2016-09-30 14:30:00.3288 CreateOrderEmex.MainForm Finish
+2016-10-01 14:30:05.7467 CreateOrderEmex.MainForm Start
+2016-10-01 14:30:06.9498 CreateOrderEmex.MainForm Object reference not set to an instance of an object.
+2016-10-01 14:30:06.9655 CreateOrderEmex.MainForm Incorrect syntax near ','.
+2016-10-01 14:30:06.9655 CreateOrderEmex.MainForm Finish
+2016-10-02 14:30:06.0282 CreateOrderEmex.MainForm Start
+2016-10-02 14:30:07.1376 CreateOrderEmex.MainForm Object reference not set to an instance of an object.
+2016-10-02 14:30:07.2157 CreateOrderEmex.MainForm Incorrect syntax near ','.
+2016-10-02 14:30:07.2157 CreateOrderEmex.MainForm Finish
+2016-10-03 14:30:03.6992 CreateOrderEmex.MainForm Start
+2016-10-03 14:30:04.7305 CreateOrderEmex.MainForm Object reference not set to an instance of an object.
+2016-10-03 14:30:04.7305 CreateOrderEmex.MainForm Incorrect syntax near ','.
+2016-10-03 14:30:04.7305 CreateOrderEmex.MainForm Finish
+2016-10-04 14:30:00.2617 CreateOrderEmex.MainForm Start
+2016-10-04 14:30:00.3086 CreateOrderEmex.MainForm Object reference not set to an instance of an object.
+2016-10-04 14:30:00.3086 CreateOrderEmex.MainForm Incorrect syntax near ','.
+2016-10-04 14:30:00.3086 CreateOrderEmex.MainForm Finish
+2016-10-05 14:30:00.2305 CreateOrderEmex.MainForm Start
+2016-10-05 14:30:00.2617 CreateOrderEmex.MainForm Object reference not set to an instance of an object.
+2016-10-05 14:30:00.2617 CreateOrderEmex.MainForm Incorrect syntax near ','.
+2016-10-05 14:30:00.2617 CreateOrderEmex.MainForm Finish
+2016-10-06 14:30:00.2305 CreateOrderEmex.MainForm Start
+2016-10-06 14:30:00.2617 CreateOrderEmex.MainForm Object reference not set to an instance of an object.
+2016-10-06 14:30:00.2617 CreateOrderEmex.MainForm Incorrect syntax near ','.
+2016-10-06 14:30:00.2617 CreateOrderEmex.MainForm Finish
+2016-10-06 14:33:13.6680 CreateOrderEmex.MainForm Start
+2016-10-06 14:33:49.9180 CreateOrderEmex.MainForm OrderNumber = 249
+2016-10-06 14:33:49.9180 CreateOrderEmex.MainForm OrderNumber = 249. ResultCode=0
+2016-10-06 14:34:19.1211 CreateOrderEmex.MainForm OrderNumber = 250
+2016-10-06 14:34:19.1211 CreateOrderEmex.MainForm OrderNumber = 250. ResultCode=0
+2016-10-06 14:34:48.1367 CreateOrderEmex.MainForm OrderNumber = 251
+2016-10-06 14:34:48.1367 CreateOrderEmex.MainForm OrderNumber = 251. ResultCode=0
+2016-10-06 14:35:18.8867 CreateOrderEmex.MainForm OrderNumber = 252
+2016-10-06 14:35:18.8867 CreateOrderEmex.MainForm OrderNumber = 252. ResultCode=0
+2016-10-06 14:35:49.1523 CreateOrderEmex.MainForm OrderNumber = 253
+2016-10-06 14:35:49.1523 CreateOrderEmex.MainForm OrderNumber = 253. ResultCode=0
+2016-10-06 14:36:17.9648 CreateOrderEmex.MainForm OrderNumber = 254
+2016-10-06 14:36:17.9648 CreateOrderEmex.MainForm OrderNumber = 254. ResultCode=0
+2016-10-06 14:36:46.7930 CreateOrderEmex.MainForm OrderNumber = 255
+2016-10-06 14:36:46.7930 CreateOrderEmex.MainForm OrderNumber = 255. ResultCode=0
+2016-10-06 14:37:15.5742 CreateOrderEmex.MainForm OrderNumber = 256
+2016-10-06 14:37:15.5742 CreateOrderEmex.MainForm OrderNumber = 256. ResultCode=0
+2016-10-06 14:37:48.9492 CreateOrderEmex.MainForm OrderNumber = 257
+2016-10-06 14:37:48.9492 CreateOrderEmex.MainForm OrderNumber = 257. ResultCode=0
+2016-10-06 14:38:22.7305 CreateOrderEmex.MainForm OrderNumber = 258
+2016-10-06 14:38:22.7305 CreateOrderEmex.MainForm OrderNumber = 258. ResultCode=0
+2016-10-06 14:38:51.4961 CreateOrderEmex.MainForm OrderNumber = 259
+2016-10-06 14:38:51.4961 CreateOrderEmex.MainForm OrderNumber = 259. ResultCode=0
+2016-10-06 14:39:20.2930 CreateOrderEmex.MainForm OrderNumber = 260
+2016-10-06 14:39:20.2930 CreateOrderEmex.MainForm OrderNumber = 260. ResultCode=0
+2016-10-06 14:39:49.1211 CreateOrderEmex.MainForm OrderNumber = 261
+2016-10-06 14:39:49.1211 CreateOrderEmex.MainForm OrderNumber = 261. ResultCode=0
+2016-10-06 14:40:18.0742 CreateOrderEmex.MainForm OrderNumber = 262
+2016-10-06 14:40:18.0742 CreateOrderEmex.MainForm OrderNumber = 262. ResultCode=0
+2016-10-06 14:40:48.2305 CreateOrderEmex.MainForm OrderNumber = 263
+2016-10-06 14:40:48.2305 CreateOrderEmex.MainForm OrderNumber = 263. ResultCode=0
+2016-10-06 14:41:20.8711 CreateOrderEmex.MainForm OrderNumber = 264
+2016-10-06 14:41:20.8867 CreateOrderEmex.MainForm OrderNumber = 264. ResultCode=0
+2016-10-06 14:41:49.1680 CreateOrderEmex.MainForm OrderNumber = 265
+2016-10-06 14:41:49.1680 CreateOrderEmex.MainForm OrderNumber = 265. ResultCode=0
+2016-10-06 14:42:30.7305 CreateOrderEmex.MainForm OrderNumber = 266
+2016-10-06 14:42:30.7305 CreateOrderEmex.MainForm OrderNumber = 266. ResultCode=0
+2016-10-06 14:42:59.3086 CreateOrderEmex.MainForm OrderNumber = 267
+2016-10-06 14:42:59.3086 CreateOrderEmex.MainForm OrderNumber = 267. ResultCode=0
+2016-10-06 14:43:28.0117 CreateOrderEmex.MainForm OrderNumber = 268
+2016-10-06 14:43:28.0117 CreateOrderEmex.MainForm OrderNumber = 268. ResultCode=0
+2016-10-06 14:43:56.9180 CreateOrderEmex.MainForm OrderNumber = 269
+2016-10-06 14:43:56.9180 CreateOrderEmex.MainForm OrderNumber = 269. ResultCode=0
+2016-10-06 14:44:25.7773 CreateOrderEmex.MainForm OrderNumber = 270
+2016-10-06 14:44:25.7773 CreateOrderEmex.MainForm OrderNumber = 270. ResultCode=0
+2016-10-06 14:44:54.5117 CreateOrderEmex.MainForm OrderNumber = 271
+2016-10-06 14:44:54.5117 CreateOrderEmex.MainForm OrderNumber = 271. ResultCode=0
+2016-10-06 14:45:23.2930 CreateOrderEmex.MainForm OrderNumber = 272
+2016-10-06 14:45:23.2930 CreateOrderEmex.MainForm OrderNumber = 272. ResultCode=0
+2016-10-06 14:45:30.3555 CreateOrderEmex.MainForm OrderNumber = 273
+2016-10-06 14:45:30.3555 CreateOrderEmex.MainForm OrderNumber = 273. ResultCode=0
+2016-10-06 14:45:30.7930 CreateOrderEmex.MainForm Finish
+2016-10-07 14:30:05.3411 CreateOrderEmex.MainForm Start
+2016-10-07 14:30:06.6536 CreateOrderEmex.MainForm Object reference not set to an instance of an object.
+2016-10-07 14:30:06.7630 CreateOrderEmex.MainForm Incorrect syntax near ','.
+2016-10-07 14:30:06.7630 CreateOrderEmex.MainForm Finish
+2016-10-08 14:30:00.3255 CreateOrderEmex.MainForm Start
+2016-10-08 14:30:00.3411 CreateOrderEmex.MainForm Object reference not set to an instance of an object.
+2016-10-08 14:30:00.3411 CreateOrderEmex.MainForm Incorrect syntax near ','.
+2016-10-08 14:30:00.3411 CreateOrderEmex.MainForm Finish
+2016-10-09 14:30:00.2470 CreateOrderEmex.MainForm Start
+2016-10-09 14:30:00.2626 CreateOrderEmex.MainForm Object reference not set to an instance of an object.
+2016-10-09 14:30:00.2626 CreateOrderEmex.MainForm Incorrect syntax near ','.
+2016-10-09 14:30:00.2626 CreateOrderEmex.MainForm Finish
+2016-10-10 14:30:00.2778 CreateOrderEmex.MainForm Start
+2016-10-10 14:30:00.2935 CreateOrderEmex.MainForm Object reference not set to an instance of an object.
+2016-10-10 14:30:00.2935 CreateOrderEmex.MainForm Incorrect syntax near ','.
+2016-10-10 14:30:00.2935 CreateOrderEmex.MainForm Finish
+2016-10-11 14:30:05.6778 CreateOrderEmex.MainForm Start
+2016-10-11 14:30:06.8653 CreateOrderEmex.MainForm Object reference not set to an instance of an object.
+2016-10-11 14:30:06.9435 CreateOrderEmex.MainForm Incorrect syntax near ','.
+2016-10-11 14:30:06.9435 CreateOrderEmex.MainForm Finish
+2016-10-12 14:30:04.6935 CreateOrderEmex.MainForm Start
+2016-10-12 14:30:05.8810 CreateOrderEmex.MainForm Object reference not set to an instance of an object.
+2016-10-12 14:30:06.0372 CreateOrderEmex.MainForm Incorrect syntax near ','.
+2016-10-12 14:30:06.0372 CreateOrderEmex.MainForm Finish
+2016-10-13 14:30:04.4278 CreateOrderEmex.MainForm Start
+2016-10-13 14:30:05.6622 CreateOrderEmex.MainForm Object reference not set to an instance of an object.
+2016-10-13 14:30:05.7403 CreateOrderEmex.MainForm Incorrect syntax near ','.
+2016-10-13 14:30:05.7403 CreateOrderEmex.MainForm Finish

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="97cc41a3-cedb-4531-8d9a-d81556b5c61f" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://emexonline.com:4000/Store.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="StoreApi1.wsdl" MetadataType="Wsdl" ID="af960cdd-1f5b-4851-a4a6-b254b3eac429" SourceId="1" SourceUrl="http://emexonline.com:4000/Store.svc?wsdl" />
+    <MetadataFile FileName="Store6.xsd" MetadataType="Schema" ID="6a5bd6cc-dedf-479f-863d-b07c2f072ea6" SourceId="1" SourceUrl="http://emexonline.com:4000/Store.svc?xsd=xsd5" />
+    <MetadataFile FileName="Store61.xsd" MetadataType="Schema" ID="38da7150-2233-49c7-ab60-5a5ea0a28e99" SourceId="1" SourceUrl="http://emexonline.com:4000/Store.svc?xsd=xsd2" />
+    <MetadataFile FileName="Store62.xsd" MetadataType="Schema" ID="e87e719d-1e53-453c-8a30-2b986c7c8cfe" SourceId="1" SourceUrl="http://emexonline.com:4000/Store.svc?xsd=xsd3" />
+    <MetadataFile FileName="Store63.xsd" MetadataType="Schema" ID="ab1fb772-047a-4c84-b94c-12664ea0daac" SourceId="1" SourceUrl="http://emexonline.com:4000/Store.svc?xsd=xsd0" />
+    <MetadataFile FileName="Store64.xsd" MetadataType="Schema" ID="46b344b0-84af-47d5-9041-f0f51d22690f" SourceId="1" SourceUrl="http://emexonline.com:4000/Store.svc?xsd=xsd1" />
+    <MetadataFile FileName="Store1.disco" MetadataType="Disco" ID="93e8e061-fe3b-446f-9192-eb671b598235" SourceId="1" SourceUrl="http://emexonline.com:4000/Store.svc?disco" />
+    <MetadataFile FileName="Store65.xsd" MetadataType="Schema" ID="a6d7c9d6-880e-4bb6-acd4-3cbfa135246e" SourceId="1" SourceUrl="http://emexonline.com:4000/Store.svc?xsd=xsd4" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

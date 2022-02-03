@@ -1,0 +1,13 @@
+C:\EMEX\CreateOrderEmex\CreateOrderEmex\bin\Release\CreateOrderEmex.exe.config
+C:\EMEX\CreateOrderEmex\CreateOrderEmex\bin\Release\NLog.config
+C:\EMEX\CreateOrderEmex\CreateOrderEmex\bin\Release\CreateOrderEmex.exe
+C:\EMEX\CreateOrderEmex\CreateOrderEmex\bin\Release\CreateOrderEmex.pdb
+C:\EMEX\CreateOrderEmex\CreateOrderEmex\obj\x86\Release\CreateOrderEmex.MainForm.resources
+C:\EMEX\CreateOrderEmex\CreateOrderEmex\obj\x86\Release\CreateOrderEmex.Properties.Resources.resources
+C:\EMEX\CreateOrderEmex\CreateOrderEmex\obj\x86\Release\CreateOrderEmex.exe
+C:\EMEX\CreateOrderEmex\CreateOrderEmex\obj\x86\Release\CreateOrderEmex.pdb
+C:\EMEX\CreateOrderEmex\CreateOrderEmex\obj\x86\Release\CreateOrderEmex.csproj.GenerateResource.Cache
+C:\EMEX\CreateOrderEmex\EMEXUAEB\CreateOrderEmex.exe.config
+C:\EMEX\CreateOrderEmex\EMEXUAEB\NLog.config
+C:\EMEX\CreateOrderEmex\EMEXUAEB\CreateOrderEmex.exe
+C:\EMEX\CreateOrderEmex\EMEXUAEB\CreateOrderEmex.pdb

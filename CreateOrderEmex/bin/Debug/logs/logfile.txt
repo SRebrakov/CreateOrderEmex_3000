@@ -1,0 +1,55 @@
+2012-06-21 11:40:06.7014 CreateOrderEmex.MainForm System.Net.Mail.SmtpException: ???? ??? ???????? ????????? ??????????? ?????. ---> System.Net.WebException: ?????????? ??????????? ? ????????? ???????? ---> System.Net.Sockets.SocketException: ??????????? ?? ???????????, ?.?. ???????? ????????? ?????? ?????? ?? ??????????? 193.232.159.144:25
+   ? System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   ? System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Int32 timeout, Exception& exception)
+   --- ????? ??????????? ??????????? ????? ?????????? ---
+   ? System.Net.ServicePoint.GetConnection(PooledStream PooledStream, Object owner, Boolean async, IPAddress& address, Socket& abortSocket, Socket& abortSocket6, Int32 timeout)
+   ? System.Net.PooledStream.Activate(Object owningObject, Boolean async, Int32 timeout, GeneralAsyncDelegate asyncCallback)
+   ? System.Net.PooledStream.Activate(Object owningObject, GeneralAsyncDelegate asyncCallback)
+   ? System.Net.ConnectionPool.GetConnection(Object owningObject, GeneralAsyncDelegate asyncCallback, Int32 creationTimeout)
+   ? System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   ? System.Net.Mail.SmtpTransport.GetConnection(ServicePoint servicePoint)
+   ? System.Net.Mail.SmtpClient.GetConnection()
+   ? System.Net.Mail.SmtpClient.Send(MailMessage message)
+   --- ????? ??????????? ??????????? ????? ?????????? ---
+   ? System.Net.Mail.SmtpClient.Send(MailMessage message)
+   ? CreateOrderEmex.MainForm.SendMail(String sSubject, String sBody) ? C:\EMEX\CreateOrderEmex\CreateOrderEmex\MainFrm.cs:?????? 411
+2012-06-21 11:41:21.7907 CreateOrderEmex.MainForm SQL Server blocked access to procedure 'dbo.sp_send_dbmail' of component 'Database Mail XPs' because this component is turned off as part of the security configuration for this server. A system administrator can enable the use of 'Database Mail XPs' by using sp_configure. For more information about enabling 'Database Mail XPs', see "Surface Area Configuration" in SQL Server Books Online. 
+2012-06-21 11:41:26.0169 CreateOrderEmex.MainForm System.Net.Mail.SmtpException: ???? ??? ???????? ????????? ??????????? ?????. ---> System.Net.WebException: ?????????? ??????????? ? ????????? ???????? ---> System.Net.Sockets.SocketException: ??????????? ?? ???????????, ?.?. ???????? ????????? ?????? ?????? ?? ??????????? 193.232.159.144:25
+   ? System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   ? System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Int32 timeout, Exception& exception)
+   --- ????? ??????????? ??????????? ????? ?????????? ---
+   ? System.Net.ServicePoint.GetConnection(PooledStream PooledStream, Object owner, Boolean async, IPAddress& address, Socket& abortSocket, Socket& abortSocket6, Int32 timeout)
+   ? System.Net.PooledStream.Activate(Object owningObject, Boolean async, Int32 timeout, GeneralAsyncDelegate asyncCallback)
+   ? System.Net.PooledStream.Activate(Object owningObject, GeneralAsyncDelegate asyncCallback)
+   ? System.Net.ConnectionPool.GetConnection(Object owningObject, GeneralAsyncDelegate asyncCallback, Int32 creationTimeout)
+   ? System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   ? System.Net.Mail.SmtpTransport.GetConnection(ServicePoint servicePoint)
+   ? System.Net.Mail.SmtpClient.GetConnection()
+   ? System.Net.Mail.SmtpClient.Send(MailMessage message)
+   --- ????? ??????????? ??????????? ????? ?????????? ---
+   ? System.Net.Mail.SmtpClient.Send(MailMessage message)
+   ? CreateOrderEmex.MainForm.SendMail(String sSubject, String sBody) ? C:\EMEX\CreateOrderEmex\CreateOrderEmex\MainFrm.cs:?????? 411
+2012-06-21 11:41:26.0659 CreateOrderEmex.MainForm Finish
+2012-06-21 11:46:41.0839 CreateOrderEmex.MainForm Start
+2012-06-21 11:47:05.5413 CreateOrderEmex.MainForm SQL Server blocked access to procedure 'dbo.sp_send_dbmail' of component 'Database Mail XPs' because this component is turned off as part of the security configuration for this server. A system administrator can enable the use of 'Database Mail XPs' by using sp_configure. For more information about enabling 'Database Mail XPs', see "Surface Area Configuration" in SQL Server Books Online. 
+2012-06-21 11:49:12.1106 CreateOrderEmex.MainForm System.Net.Mail.SmtpException: Сбой при отправке сообщения электронной почты. ---> System.Net.WebException: Невозможно соединиться с удаленным сервером ---> System.Net.Sockets.SocketException: Попытка установить соединение была безуспешной, т.к. от другого компьютера за требуемое время не получен нужный отклик, или было разорвано уже установленное соединение из-за неверного отклика уже подключенного компьютера 193.232.159.144:587
+   в System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   в System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Int32 timeout, Exception& exception)
+   --- Конец трассировки внутреннего стека исключений ---
+   в System.Net.ServicePoint.GetConnection(PooledStream PooledStream, Object owner, Boolean async, IPAddress& address, Socket& abortSocket, Socket& abortSocket6, Int32 timeout)
+   в System.Net.PooledStream.Activate(Object owningObject, Boolean async, Int32 timeout, GeneralAsyncDelegate asyncCallback)
+   в System.Net.PooledStream.Activate(Object owningObject, GeneralAsyncDelegate asyncCallback)
+   в System.Net.ConnectionPool.GetConnection(Object owningObject, GeneralAsyncDelegate asyncCallback, Int32 creationTimeout)
+   в System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   в System.Net.Mail.SmtpTransport.GetConnection(ServicePoint servicePoint)
+   в System.Net.Mail.SmtpClient.GetConnection()
+   в System.Net.Mail.SmtpClient.Send(MailMessage message)
+   --- Конец трассировки внутреннего стека исключений ---
+   в System.Net.Mail.SmtpClient.Send(MailMessage message)
+   в CreateOrderEmex.MainForm.SendMail(String sSubject, String sBody) в C:\EMEX\CreateOrderEmex\CreateOrderEmex\MainFrm.cs:строка 411
+2012-06-21 11:50:33.1592 CreateOrderEmex.MainForm SQL Server blocked access to procedure 'dbo.sp_send_dbmail' of component 'Database Mail XPs' because this component is turned off as part of the security configuration for this server. A system administrator can enable the use of 'Database Mail XPs' by using sp_configure. For more information about enabling 'Database Mail XPs', see "Surface Area Configuration" in SQL Server Books Online. 
+2012-06-21 11:55:05.5308 CreateOrderEmex.MainForm Start
+2012-06-21 11:55:23.1568 CreateOrderEmex.MainForm SQL Server blocked access to procedure 'dbo.sp_send_dbmail' of component 'Database Mail XPs' because this component is turned off as part of the security configuration for this server. A system administrator can enable the use of 'Database Mail XPs' by using sp_configure. For more information about enabling 'Database Mail XPs', see "Surface Area Configuration" in SQL Server Books Online. 
+2012-06-21 12:01:43.1665 CreateOrderEmex.MainForm Start
+2012-06-21 12:02:05.2858 CreateOrderEmex.MainForm SQL Server blocked access to procedure 'dbo.sp_send_dbmail' of component 'Database Mail XPs' because this component is turned off as part of the security configuration for this server. A system administrator can enable the use of 'Database Mail XPs' by using sp_configure. For more information about enabling 'Database Mail XPs', see "Surface Area Configuration" in SQL Server Books Online. 
+2012-06-21 12:02:12.2262 CreateOrderEmex.MainForm Finish

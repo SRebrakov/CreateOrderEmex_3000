@@ -1,0 +1,37 @@
+2013-03-27 18:45:40.0493 CreateOrderEmex.MainForm Тайм-аут канала запроса во время ожидания ответа после истечения 00:05:00. Увеличьте значение времени тайм-аута, передаваемое вызову при Request или увеличьте значение SendTimeout в Binding. Время, назначенное для выполнения этой операции, может быть составной частью более длинного тайм-аута.
+2013-03-27 18:45:40.0805 CreateOrderEmex.MainForm Finish
+2013-03-27 18:48:45.8802 CreateOrderEmex.MainForm Start
+2013-03-27 18:50:56.3152 CreateOrderEmex.MainForm Ошибка при получении ответа HTTP на http://emexonline.com:4000/Store.svc. Возможно, это вызвано тем, что привязка конечной точки службы не использует протокол HTTP. Это может быть также вызвано тем, что контекст запроса HTTP прерван сервером (возможно, из-за отключения службы). Подробнее см. в журналах сервера.
+2013-03-27 18:52:11.1447 CreateOrderEmex.MainForm Start
+2013-03-27 18:53:13.6484 CreateOrderEmex.MainForm OrderNumber = 98
+2013-03-27 18:53:13.6484 CreateOrderEmex.MainForm OrderNumber = 98. ResultCode=0
+2013-03-27 18:58:59.6012 CreateOrderEmex.MainForm Тайм-аут канала запроса во время ожидания ответа после истечения 00:05:00. Увеличьте значение времени тайм-аута, передаваемое вызову при Request или увеличьте значение SendTimeout в Binding. Время, назначенное для выполнения этой операции, может быть составной частью более длинного тайм-аута.
+2013-03-27 18:58:59.6012 CreateOrderEmex.MainForm Finish
+2013-03-27 18:59:42.9096 CreateOrderEmex.MainForm Start
+2013-03-27 19:04:00.8154 CreateOrderEmex.MainForm Ошибка при получении ответа HTTP на http://emexonline.com:4000/Store.svc. Возможно, это вызвано тем, что привязка конечной точки службы не использует протокол HTTP. Это может быть также вызвано тем, что контекст запроса HTTP прерван сервером (возможно, из-за отключения службы). Подробнее см. в журналах сервера.
+2013-03-27 19:04:19.5511 CreateOrderEmex.MainForm Start
+2013-03-27 19:05:24.0108 CreateOrderEmex.MainForm OrderNumber = 99
+2013-03-27 19:05:24.0108 CreateOrderEmex.MainForm OrderNumber = 99. ResultCode=0
+2013-03-27 19:11:17.9015 CreateOrderEmex.MainForm Тайм-аут канала запроса во время ожидания ответа после истечения 00:05:00. Увеличьте значение времени тайм-аута, передаваемое вызову при Request или увеличьте значение SendTimeout в Binding. Время, назначенное для выполнения этой операции, может быть составной частью более длинного тайм-аута.
+2013-03-27 19:11:17.9015 CreateOrderEmex.MainForm Finish
+2013-03-27 19:12:53.1894 CreateOrderEmex.MainForm Start
+2013-03-27 19:16:19.1002 CreateOrderEmex.MainForm Ошибка при получении ответа HTTP на http://emexonline.com:4000/Store.svc. Возможно, это вызвано тем, что привязка конечной точки службы не использует протокол HTTP. Это может быть также вызвано тем, что контекст запроса HTTP прерван сервером (возможно, из-за отключения службы). Подробнее см. в журналах сервера.
+2013-03-27 19:16:32.1106 CreateOrderEmex.MainForm Start
+2013-03-27 19:17:39.4875 CreateOrderEmex.MainForm Error CreateOrder. ResultCode=-2
+2013-03-27 19:23:38.9943 CreateOrderEmex.MainForm Тайм-аут канала запроса во время ожидания ответа после истечения 00:05:00. Увеличьте значение времени тайм-аута, передаваемое вызову при Request или увеличьте значение SendTimeout в Binding. Время, назначенное для выполнения этой операции, может быть составной частью более длинного тайм-аута.
+2013-03-27 19:23:38.9943 CreateOrderEmex.MainForm Finish
+2013-03-27 19:27:37.6003 CreateOrderEmex.MainForm Start
+2013-03-27 19:28:40.2035 CreateOrderEmex.MainForm Ошибка при получении ответа HTTP на http://emexonline.com:4000/Store.svc. Возможно, это вызвано тем, что привязка конечной точки службы не использует протокол HTTP. Это может быть также вызвано тем, что контекст запроса HTTP прерван сервером (возможно, из-за отключения службы). Подробнее см. в журналах сервера.
+2013-03-27 19:28:58.5829 CreateOrderEmex.MainForm Start
+2013-03-27 19:29:55.6818 CreateOrderEmex.MainForm OrderNumber = 100
+2013-03-27 19:29:55.6818 CreateOrderEmex.MainForm OrderNumber = 100. ResultCode=0
+2013-03-27 19:35:44.4869 CreateOrderEmex.MainForm Тайм-аут канала запроса во время ожидания ответа после истечения 00:05:00. Увеличьте значение времени тайм-аута, передаваемое вызову при Request или увеличьте значение SendTimeout в Binding. Время, назначенное для выполнения этой операции, может быть составной частью более длинного тайм-аута.
+2013-03-27 19:35:44.4869 CreateOrderEmex.MainForm Finish
+2013-03-27 19:39:29.2376 CreateOrderEmex.MainForm Start
+2013-03-27 19:40:45.7118 CreateOrderEmex.MainForm Ошибка при получении ответа HTTP на http://emexonline.com:4000/Store.svc. Возможно, это вызвано тем, что привязка конечной точки службы не использует протокол HTTP. Это может быть также вызвано тем, что контекст запроса HTTP прерван сервером (возможно, из-за отключения службы). Подробнее см. в журналах сервера.
+2013-03-27 19:41:48.2370 CreateOrderEmex.MainForm Start
+2013-03-27 19:42:59.3890 CreateOrderEmex.MainForm OrderNumber = 101
+2013-03-27 19:42:59.3890 CreateOrderEmex.MainForm OrderNumber = 101. ResultCode=0
+2013-03-27 19:43:58.0142 CreateOrderEmex.MainForm OrderNumber = 102
+2013-03-27 19:43:58.0142 CreateOrderEmex.MainForm OrderNumber = 102. ResultCode=0
+2013-03-27 19:43:58.9190 CreateOrderEmex.MainForm Finish

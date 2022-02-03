@@ -1,0 +1,137 @@
+2016-05-30 14:32:00.9868 CreateOrderEmex.MainForm OrderNumber = 138. ResultCode=0
+2016-05-30 14:32:27.2933 CreateOrderEmex.MainForm OrderNumber = 139
+2016-05-30 14:32:27.2933 CreateOrderEmex.MainForm OrderNumber = 139. ResultCode=0
+2016-05-30 14:32:54.1159 CreateOrderEmex.MainForm OrderNumber = 140
+2016-05-30 14:32:54.1159 CreateOrderEmex.MainForm OrderNumber = 140. ResultCode=0
+2016-05-30 14:33:20.2194 CreateOrderEmex.MainForm OrderNumber = 141
+2016-05-30 14:33:20.2194 CreateOrderEmex.MainForm OrderNumber = 141. ResultCode=0
+2016-05-30 14:33:45.9578 CreateOrderEmex.MainForm OrderNumber = 142
+2016-05-30 14:33:45.9578 CreateOrderEmex.MainForm OrderNumber = 142. ResultCode=0
+2016-05-30 14:34:12.1963 CreateOrderEmex.MainForm OrderNumber = 143
+2016-05-30 14:34:12.1963 CreateOrderEmex.MainForm OrderNumber = 143. ResultCode=0
+2016-05-30 14:34:38.2478 CreateOrderEmex.MainForm OrderNumber = 144
+2016-05-30 14:34:38.2478 CreateOrderEmex.MainForm OrderNumber = 144. ResultCode=0
+2016-05-30 14:34:47.9534 CreateOrderEmex.MainForm OrderNumber = 145
+2016-05-30 14:34:47.9534 CreateOrderEmex.MainForm OrderNumber = 145. ResultCode=0
+2016-05-30 14:34:48.3194 CreateOrderEmex.MainForm Finish
+2016-05-31 14:30:03.9989 CreateOrderEmex.MainForm Start
+2016-05-31 14:30:04.6480 CreateOrderEmex.MainForm Object reference not set to an instance of an object.
+2016-05-31 14:30:04.7110 CreateOrderEmex.MainForm Incorrect syntax near ','.
+2016-05-31 14:30:04.7110 CreateOrderEmex.MainForm Finish
+2016-06-01 14:30:05.2988 CreateOrderEmex.MainForm Start
+2016-06-01 14:30:05.9669 CreateOrderEmex.MainForm Object reference not set to an instance of an object.
+2016-06-01 14:30:06.0259 CreateOrderEmex.MainForm Incorrect syntax near ','.
+2016-06-01 14:30:06.0259 CreateOrderEmex.MainForm Finish
+2016-06-02 14:30:12.6670 CreateOrderEmex.MainForm Start
+2016-06-02 14:30:14.9212 CreateOrderEmex.MainForm Object reference not set to an instance of an object.
+2016-06-02 14:30:14.9902 CreateOrderEmex.MainForm Incorrect syntax near ','.
+2016-06-02 14:30:14.9902 CreateOrderEmex.MainForm Finish
+2016-06-03 14:30:08.5926 CreateOrderEmex.MainForm Start
+2016-06-03 14:30:10.2947 CreateOrderEmex.MainForm Object reference not set to an instance of an object.
+2016-06-03 14:30:10.3527 CreateOrderEmex.MainForm Incorrect syntax near ','.
+2016-06-03 14:30:10.3527 CreateOrderEmex.MainForm Finish
+2016-06-04 14:30:06.6253 CreateOrderEmex.MainForm Start
+2016-06-04 14:30:07.3403 CreateOrderEmex.MainForm Object reference not set to an instance of an object.
+2016-06-04 14:30:07.3993 CreateOrderEmex.MainForm Incorrect syntax near ','.
+2016-06-04 14:30:07.3993 CreateOrderEmex.MainForm Finish
+2016-06-05 14:30:05.4100 CreateOrderEmex.MainForm Start
+2016-06-05 14:30:06.1031 CreateOrderEmex.MainForm Object reference not set to an instance of an object.
+2016-06-05 14:30:06.1641 CreateOrderEmex.MainForm Incorrect syntax near ','.
+2016-06-05 14:30:06.1641 CreateOrderEmex.MainForm Finish
+2016-06-06 14:30:08.6900 CreateOrderEmex.MainForm Start
+2016-06-06 14:30:47.7492 CreateOrderEmex.MainForm OrderNumber = 146
+2016-06-06 14:30:47.7492 CreateOrderEmex.MainForm OrderNumber = 146. ResultCode=0
+2016-06-06 14:31:17.0099 CreateOrderEmex.MainForm OrderNumber = 147
+2016-06-06 14:31:17.0099 CreateOrderEmex.MainForm OrderNumber = 147. ResultCode=0
+2016-06-06 14:31:45.5635 CreateOrderEmex.MainForm OrderNumber = 148
+2016-06-06 14:31:45.5635 CreateOrderEmex.MainForm OrderNumber = 148. ResultCode=0
+2016-06-06 14:32:14.3302 CreateOrderEmex.MainForm OrderNumber = 149
+2016-06-06 14:32:14.3302 CreateOrderEmex.MainForm OrderNumber = 149. ResultCode=0
+2016-06-06 14:32:42.4308 CreateOrderEmex.MainForm OrderNumber = 150
+2016-06-06 14:32:42.4308 CreateOrderEmex.MainForm OrderNumber = 150. ResultCode=0
+2016-06-06 14:33:11.0244 CreateOrderEmex.MainForm OrderNumber = 151
+2016-06-06 14:33:11.0244 CreateOrderEmex.MainForm OrderNumber = 151. ResultCode=0
+2016-06-06 14:33:39.8421 CreateOrderEmex.MainForm OrderNumber = 152
+2016-06-06 14:33:39.8421 CreateOrderEmex.MainForm OrderNumber = 152. ResultCode=0
+2016-06-06 14:33:46.4895 CreateOrderEmex.MainForm OrderNumber = 153
+2016-06-06 14:33:46.4895 CreateOrderEmex.MainForm OrderNumber = 153. ResultCode=0
+2016-06-06 14:33:46.9185 CreateOrderEmex.MainForm Finish
+2016-06-07 14:30:08.3128 CreateOrderEmex.MainForm Start
+2016-06-07 14:30:09.3058 CreateOrderEmex.MainForm Object reference not set to an instance of an object.
+2016-06-07 14:30:09.3718 CreateOrderEmex.MainForm Incorrect syntax near ','.
+2016-06-07 14:30:09.3718 CreateOrderEmex.MainForm Finish
+2016-06-08 14:30:06.4135 CreateOrderEmex.MainForm Start
+2016-06-08 14:30:07.1575 CreateOrderEmex.MainForm Object reference not set to an instance of an object.
+2016-06-08 14:30:07.2645 CreateOrderEmex.MainForm Incorrect syntax near ','.
+2016-06-08 14:30:07.2645 CreateOrderEmex.MainForm Finish
+2016-06-09 14:30:05.2252 CreateOrderEmex.MainForm Start
+2016-06-09 14:30:05.8732 CreateOrderEmex.MainForm Object reference not set to an instance of an object.
+2016-06-09 14:30:05.9352 CreateOrderEmex.MainForm Incorrect syntax near ','.
+2016-06-09 14:30:05.9352 CreateOrderEmex.MainForm Finish
+2016-06-10 14:30:06.7161 CreateOrderEmex.MainForm Start
+2016-06-10 14:30:07.3531 CreateOrderEmex.MainForm Object reference not set to an instance of an object.
+2016-06-10 14:30:07.4131 CreateOrderEmex.MainForm Incorrect syntax near ','.
+2016-06-10 14:30:07.4131 CreateOrderEmex.MainForm Finish
+2016-06-11 14:30:06.8409 CreateOrderEmex.MainForm Start
+2016-06-11 14:30:08.3230 CreateOrderEmex.MainForm Object reference not set to an instance of an object.
+2016-06-11 14:30:09.0140 CreateOrderEmex.MainForm Incorrect syntax near ','.
+2016-06-11 14:30:09.0140 CreateOrderEmex.MainForm Finish
+2016-06-12 14:30:05.4416 CreateOrderEmex.MainForm Start
+2016-06-12 14:30:06.0426 CreateOrderEmex.MainForm Object reference not set to an instance of an object.
+2016-06-12 14:30:06.1006 CreateOrderEmex.MainForm Incorrect syntax near ','.
+2016-06-12 14:30:06.1006 CreateOrderEmex.MainForm Finish
+2016-06-13 14:30:07.4862 CreateOrderEmex.MainForm Start
+2016-06-13 14:30:45.9614 CreateOrderEmex.MainForm OrderNumber = 154
+2016-06-13 14:30:45.9614 CreateOrderEmex.MainForm OrderNumber = 154. ResultCode=0
+2016-06-13 14:31:15.2011 CreateOrderEmex.MainForm OrderNumber = 155
+2016-06-13 14:31:15.2011 CreateOrderEmex.MainForm OrderNumber = 155. ResultCode=0
+2016-06-13 14:31:44.0228 CreateOrderEmex.MainForm OrderNumber = 156
+2016-06-13 14:31:44.0228 CreateOrderEmex.MainForm OrderNumber = 156. ResultCode=0
+2016-06-13 14:32:12.4494 CreateOrderEmex.MainForm OrderNumber = 157
+2016-06-13 14:32:12.4494 CreateOrderEmex.MainForm OrderNumber = 157. ResultCode=0
+2016-06-13 14:32:39.9099 CreateOrderEmex.MainForm OrderNumber = 158
+2016-06-13 14:32:39.9099 CreateOrderEmex.MainForm OrderNumber = 158. ResultCode=0
+2016-06-13 14:33:06.9915 CreateOrderEmex.MainForm OrderNumber = 159
+2016-06-13 14:33:06.9915 CreateOrderEmex.MainForm OrderNumber = 159. ResultCode=0
+2016-06-13 14:33:34.8171 CreateOrderEmex.MainForm OrderNumber = 160
+2016-06-13 14:33:34.8171 CreateOrderEmex.MainForm OrderNumber = 160. ResultCode=0
+2016-06-13 14:34:03.0767 CreateOrderEmex.MainForm OrderNumber = 161
+2016-06-13 14:34:03.0767 CreateOrderEmex.MainForm OrderNumber = 161. ResultCode=0
+2016-06-13 14:34:16.4695 CreateOrderEmex.MainForm OrderNumber = 162
+2016-06-13 14:34:16.4695 CreateOrderEmex.MainForm OrderNumber = 162. ResultCode=0
+2016-06-13 14:34:16.8525 CreateOrderEmex.MainForm Finish
+2016-06-14 14:30:07.9551 CreateOrderEmex.MainForm Start
+2016-06-14 14:30:09.1231 CreateOrderEmex.MainForm Object reference not set to an instance of an object.
+2016-06-14 14:30:09.1861 CreateOrderEmex.MainForm Incorrect syntax near ','.
+2016-06-14 14:30:09.1861 CreateOrderEmex.MainForm Finish
+2016-06-15 14:30:08.3019 CreateOrderEmex.MainForm Start
+2016-06-15 14:30:09.5239 CreateOrderEmex.MainForm Object reference not set to an instance of an object.
+2016-06-15 14:30:09.6379 CreateOrderEmex.MainForm Incorrect syntax near ','.
+2016-06-15 14:30:09.6379 CreateOrderEmex.MainForm Finish
+2016-06-16 14:30:08.2407 CreateOrderEmex.MainForm Start
+2016-06-16 14:30:09.3257 CreateOrderEmex.MainForm Object reference not set to an instance of an object.
+2016-06-16 14:30:09.4147 CreateOrderEmex.MainForm Incorrect syntax near ','.
+2016-06-16 14:30:09.4147 CreateOrderEmex.MainForm Finish
+2016-06-17 14:30:08.7825 CreateOrderEmex.MainForm Start
+2016-06-17 14:30:10.3266 CreateOrderEmex.MainForm Object reference not set to an instance of an object.
+2016-06-17 14:30:10.4256 CreateOrderEmex.MainForm Incorrect syntax near ','.
+2016-06-17 14:30:10.4266 CreateOrderEmex.MainForm Finish
+2016-06-18 14:30:06.1481 CreateOrderEmex.MainForm Start
+2016-06-18 14:30:07.1262 CreateOrderEmex.MainForm Object reference not set to an instance of an object.
+2016-06-18 14:30:07.1902 CreateOrderEmex.MainForm Incorrect syntax near ','.
+2016-06-18 14:30:07.1902 CreateOrderEmex.MainForm Finish
+2016-06-19 14:30:07.1400 CreateOrderEmex.MainForm Start
+2016-06-19 14:30:07.9600 CreateOrderEmex.MainForm Object reference not set to an instance of an object.
+2016-06-19 14:30:08.0180 CreateOrderEmex.MainForm Incorrect syntax near ','.
+2016-06-19 14:30:08.0180 CreateOrderEmex.MainForm Finish
+2016-06-20 14:30:05.8747 CreateOrderEmex.MainForm Start
+2016-06-20 14:30:06.6438 CreateOrderEmex.MainForm Object reference not set to an instance of an object.
+2016-06-20 14:30:06.7048 CreateOrderEmex.MainForm Incorrect syntax near ','.
+2016-06-20 14:30:06.7048 CreateOrderEmex.MainForm Finish
+2016-06-21 14:30:08.0567 CreateOrderEmex.MainForm Start
+2016-06-21 14:30:09.0497 CreateOrderEmex.MainForm Object reference not set to an instance of an object.
+2016-06-21 14:30:09.2167 CreateOrderEmex.MainForm Incorrect syntax near ','.
+2016-06-21 14:30:09.2167 CreateOrderEmex.MainForm Finish
+2016-06-22 14:30:04.8143 CreateOrderEmex.MainForm Start
+2016-06-22 14:30:05.8783 CreateOrderEmex.MainForm Object reference not set to an instance of an object.
+2016-06-22 14:30:05.9463 CreateOrderEmex.MainForm Incorrect syntax near ','.
