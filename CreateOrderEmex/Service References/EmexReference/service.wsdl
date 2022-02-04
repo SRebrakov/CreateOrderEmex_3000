@@ -1,0 +1,2484 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://emexonline.com:3000/MaximaWS/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://emexonline.com:3000/MaximaWS/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://emexonline.com:3000/MaximaWS/">
+      <s:element name="TEST">
+        <s:complexType />
+      </s:element>
+      <s:element name="TESTResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TESTResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Login">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Customer" type="tns:Customer" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Customer">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SubCustomerId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerId" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="LoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoginResult" type="tns:Customer" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchPart">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Customer" type="tns:Customer" />
+            <s:element minOccurs="0" maxOccurs="1" name="DetailNum" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ShowSubsts" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchPartResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchPartResult" type="tns:ArrayOfFindByNumber" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfFindByNumber">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="FindByNumber" nillable="true" type="tns:FindByNumber" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="FindByNumber">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Available" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="bitOldNum" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="PercentSupped" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="PriceId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Region" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Delivery" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Make" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DetailNum" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PriceLogo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Price" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="PartNameRus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PartNameEng" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="WeightGr" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="MakeName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Packing" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="bitECO" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="bitWeightMeasured" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="VolumeAdd" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="GuaranteedDay" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SearchPartEx">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Customer" type="tns:Customer" />
+            <s:element minOccurs="0" maxOccurs="1" name="DetailNum" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ShowSubsts" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="MakeLogo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PriceLogo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DestinationLogo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchPartExResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchPartExResult" type="tns:ArrayOfFindByNumber" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Quotation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Customer" type="tns:Customer" />
+            <s:element minOccurs="0" maxOccurs="1" name="P" type="tns:ArrayOfQuotation" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfQuotation">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Quotation" nillable="true" type="tns:Quotation" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Quotation">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PriceLogo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Delivery" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="DestinationLogo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Price" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="MakeLogo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DetailNum" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PriceId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="PartNameRus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PartNameEng" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="WeightGr" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="MakeName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Packing" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="bitECO" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="bitWeightMeasured" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="QuotationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QuotationResult" type="tns:ArrayOfQuotation" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QuotationList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Customer" type="tns:Customer" />
+            <s:element minOccurs="0" maxOccurs="1" name="P" type="tns:ArrayOfQuotationList" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfQuotationList">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="QuotationList" nillable="true" type="tns:QuotationList" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="QuotationList">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PriceLogo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Delivery" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="DestinationLogo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Price" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="MakeLogo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DetailNum" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PriceId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="PartNameRus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PartNameEng" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="WeightGr" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="MakeName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Packing" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="bitECO" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="bitWeightMeasured" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Reference" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Quantity" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="QuotationListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QuotationListResult" type="tns:ArrayOfQuotationList" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QuotationList_v2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Customer" type="tns:Customer" />
+            <s:element minOccurs="0" maxOccurs="1" name="P" type="tns:ArrayOfQuotationList_v2" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfQuotationList_v2">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="QuotationList_v2" nillable="true" type="tns:QuotationList_v2" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="QuotationList_v2">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:QuotationList">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="HeightCm" nillable="true" type="s:long" />
+              <s:element minOccurs="1" maxOccurs="1" name="WidthCm" nillable="true" type="s:long" />
+              <s:element minOccurs="1" maxOccurs="1" name="LengthCm" nillable="true" type="s:long" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="QuotationList_v2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QuotationList_v2Result" type="tns:ArrayOfQuotationList_v2" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertPartToBasket">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Customer" type="tns:Customer" />
+            <s:element minOccurs="0" maxOccurs="1" name="Array" type="tns:ArrayOfPartstobasket" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfPartstobasket">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="partstobasket" nillable="true" type="tns:partstobasket" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="partstobasket">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CoeffMaxAgree" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="UploadedPrice" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="bitAgree" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="OnlyThisBrand" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="Confirm" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="Delete" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="BasketId" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="MakeLogo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DetailNum" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DestinationLogo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PriceLogo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Quantity" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="bitOnly" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="bitQuantity" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="bitWait" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Reference" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CustomerSubId" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="TransportPack" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DetailWeight" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="EmExWeight" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerStickerData" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InsertPartToBasketResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertPartToBasketResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBasketDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Customer" type="tns:Customer" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBasketDetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBasketDetailsResult" type="tns:ArrayOfBasketDetails" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfBasketDetails">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="BasketDetails" nillable="true" type="tns:BasketDetails" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="BasketDetails">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Comments" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="UploadedPrice" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="CoeffMaxAgree" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Price" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerLogo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="bitConfirm" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="bitAgree" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="bitOnlyThisBrand" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="Date_add" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="BasketId" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="MakeLogo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DetailNum" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DestinationLogo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PriceLogo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Quantity" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="bitOnlyThisNumber" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="bitOnlyThisQuantity" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="bitWait" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Reference" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerSubId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TransportPack" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DetailWeight" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="EmExWeight" type="s:double" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="UpdateBasketDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Customer" type="tns:Customer" />
+            <s:element minOccurs="0" maxOccurs="1" name="P" type="tns:ArrayOfBasketDetails" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateBasketDetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateBasketDetailsResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteFromBasket">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Customer" type="tns:Customer" />
+            <s:element minOccurs="0" maxOccurs="1" name="P" type="tns:ArrayOfBasketDetails" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteFromBasketResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteFromBasketResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCustomersIp">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Customer" type="tns:Customer" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCustomersIpResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCustomersIpResult" type="tns:ArrayOfIPlist" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfIPlist">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="IPlist" nillable="true" type="tns:IPlist" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IPlist">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Desc" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IP" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DateAdd" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="DeleteIp">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Customer" type="tns:Customer" />
+            <s:element minOccurs="0" maxOccurs="1" name="Ip" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteIpResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteIpResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertIp">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Customer" type="tns:Customer" />
+            <s:element minOccurs="0" maxOccurs="1" name="Ip" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Desc" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertIpResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertIpResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateIp">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Customer" type="tns:Customer" />
+            <s:element minOccurs="0" maxOccurs="1" name="Ip" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Desc" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateIpResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateIpResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListOfOrders">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Customer" type="tns:Customer" />
+            <s:element minOccurs="1" maxOccurs="1" name="bitInWork" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListOfOrdersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetListOfOrdersResult" type="tns:ArrayOfListOfOrders" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfListOfOrders">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ListOfOrders" nillable="true" type="tns:ListOfOrders" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ListOfOrders">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="OrderNumber" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="OrderDate" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetFromInfoLog">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Customer" type="tns:Customer" />
+            <s:element minOccurs="0" maxOccurs="1" name="MethodName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFromInfoLogResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFromInfoLogResult" type="tns:ArrayOfLogInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfLogInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="LogInfo" nillable="true" type="tns:LogInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="LogInfo">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="DateTime" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Text" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CreateOrder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Customer" type="tns:Customer" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateOrderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CreateOrderResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MovementByOrderNumber">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Customer" type="tns:Customer" />
+            <s:element minOccurs="1" maxOccurs="1" name="OrderNumber" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MovementByOrderNumberResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MovementByOrderNumberResult" type="tns:ArrayOfMovement" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfMovement">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Movement" nillable="true" type="tns:Movement" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Movement">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="OrderNumber" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="DocumentDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrderDetailSubId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Comment" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PriceOrdered" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="PriceSale" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="Make" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DetailNum" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Quantity" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Condition" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Reference" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DetailNameRus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DetailNameEng" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CustomerSubId" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="SubstMake" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SubstNum" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DestinationLogo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PriceLogo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="StatusId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="StateText" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="MovementInWork">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Customer" type="tns:Customer" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MovementInWorkResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MovementInWorkResult" type="tns:ArrayOfMovement" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MovementPurchased">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Customer" type="tns:Customer" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MovementPurchasedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MovementPurchasedResult" type="tns:ArrayOfMovement" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MovementNotAvailable">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Customer" type="tns:Customer" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MovementNotAvailableResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MovementNotAvailableResult" type="tns:ArrayOfMovement" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MovementReadyToSend">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Customer" type="tns:Customer" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MovementReadyToSendResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MovementReadyToSendResult" type="tns:ArrayOfMovement" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MovementReceivedOnStock">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Customer" type="tns:Customer" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MovementReceivedOnStockResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MovementReceivedOnStockResult" type="tns:ArrayOfMovement" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MovementSent">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Customer" type="tns:Customer" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MovementSentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MovementSentResult" type="tns:ArrayOfMovement" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MovementAGREE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Customer" type="tns:Customer" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MovementAGREEResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MovementAGREEResult" type="tns:ArrayOfMovement" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchInHistory">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Customer" type="tns:Customer" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parameter" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Type" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchInHistoryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchInHistoryResult" type="tns:ArrayOfMovement" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSubCustomersDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Customer" type="tns:Customer" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSubCustomersDetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSubCustomersDetailsResult" type="tns:ArrayOfSubCustomers" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfSubCustomers">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SubCustomers" nillable="true" type="tns:SubCustomers" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SubCustomers">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerId" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DateOfJoin" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="Profit" type="s:double" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="DeleteSubCustomer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Customer" type="tns:Customer" />
+            <s:element minOccurs="1" maxOccurs="1" name="SubCustomerId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteSubCustomerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteSubCustomerResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateSubCustomer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Customer" type="tns:Customer" />
+            <s:element minOccurs="1" maxOccurs="1" name="SubCustomerId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="SubCustomerLogo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Profit" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="SubCustomerPassword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateSubCustomerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateSubCustomerResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddSubCustomer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Customer" type="tns:Customer" />
+            <s:element minOccurs="0" maxOccurs="1" name="SubCustomerLogo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Profit" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="SubCustomerPassword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddSubCustomerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddSubCustomerResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBoxesReadyToSend">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Customer" type="tns:Customer" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBoxesReadyToSendResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBoxesReadyToSendResult" type="tns:ArrayOfBoxes" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfBoxes">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Boxes" nillable="true" type="tns:Boxes" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Boxes">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="DateCreated" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="BoxType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DestType" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BoxNumber" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="Height" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Width" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Length" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Weight" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="BoxNetAmount" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="BoxAmount" type="s:double" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetBoxesInIvoice">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Customer" type="tns:Customer" />
+            <s:element minOccurs="1" maxOccurs="1" name="InvoiceNumber" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBoxesInIvoiceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBoxesInIvoiceResult" type="tns:ArrayOfBoxes" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInvoicesList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Customer" type="tns:Customer" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInvoicesListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetInvoicesListResult" type="tns:ArrayOfInvoicelist" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfInvoicelist">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Invoicelist" nillable="true" type="tns:Invoicelist" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Invoicelist">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="InvoiceNumber" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="InvoiceDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="Amount" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Weight" type="s:double" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetPackingDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Customer" type="tns:Customer" />
+            <s:element minOccurs="1" maxOccurs="1" name="InvoiceNumber" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPackingDetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPackingDetailsResult" type="tns:ArrayOfInvDetails" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfInvDetails">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="InvDetails" nillable="true" type="tns:InvDetails" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="InvDetails">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Portion" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="DestinationLogo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="OrderDetailSubId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="PriceLogo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Substitution" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MakeSubstitution" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Reference" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerSubId" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="WeightGr" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="OrderNumber" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="BoxNumber" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="MakeLogo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MakeName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DetailNum" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Quantity" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Price" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="DetailNameEng" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DetailNameRus" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetInvoiceDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Customer" type="tns:Customer" />
+            <s:element minOccurs="1" maxOccurs="1" name="InvoiceNumber" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInvoiceDetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetInvoiceDetailsResult" type="tns:ArrayOfInvDetails" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AllowCreateOrder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Customer" type="tns:Customer" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AllowCreateOrderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AllowCreateOrderResult" type="tns:BalanceForOrder" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="BalanceForOrder">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Total" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Balance" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Credit" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="NewOrderAmount" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrdersInWork" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetBalance">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Customer" type="tns:Customer" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBalanceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBalanceResult" type="tns:ArrayOfBalance" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfBalance">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Balance" nillable="true" type="tns:Balance" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Balance">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Date" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Document" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Comment" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Debit" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Credit" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Saldo" type="s:double" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SetAgree">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Customer" type="tns:Customer" />
+            <s:element minOccurs="1" maxOccurs="1" name="OrderDetailSubId" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetAgreeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SetAgreeResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchHistory">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Customer" type="tns:Customer" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchHistoryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchHistoryResult" type="tns:ArrayOfSearchHistory" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfSearchHistory">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SearchHistory" nillable="true" type="tns:SearchHistory" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SearchHistory">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DetailNum" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="FindSameNumbers">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DetailNum" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FindSameNumbersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FindSameNumbersResult" type="tns:ArrayOfSearchHistory" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDestinations">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PriceLogo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDestinationsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDestinationsResult" type="tns:ArrayOfDestinations" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfDestinations">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Destinations" nillable="true" type="tns:Destinations" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Destinations">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="DestinationId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="DestinationLogo" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetCustDestinations">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Customer" type="tns:Customer" />
+            <s:element minOccurs="0" maxOccurs="1" name="PriceLogo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCustDestinationsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCustDestinationsResult" type="tns:ArrayOfDestinations" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBoxDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Customer" type="tns:Customer" />
+            <s:element minOccurs="1" maxOccurs="1" name="BoxNumber" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBoxDetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBoxDetailsResult" type="tns:ArrayOfBoxdetails" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfBoxdetails">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="boxdetails" nillable="true" type="tns:boxdetails" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="boxdetails">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="OrderDetailSubId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Reference" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerSubId" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="WeightGr" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="MakeLogo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DetailNum" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Quantity" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Price" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="DetailNameEng" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DetailNameRus" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetDetailHistory">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Customer" type="tns:Customer" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parameter" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Type" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDetailHistoryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDetailHistoryResult" type="tns:ArrayOfHistory" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfHistory">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="History" nillable="true" type="tns:History" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="History">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="OrderDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="OrderNumber" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Make" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DetailNum" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Quantity" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="DestinationLogo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DetailPrice" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="Condition" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Steps" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Reference" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Substitution" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MakeSubstitution" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DetailPriceSale" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="DetailNameRus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DetailNameEng" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CustomerSubId" type="s:long" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetDetailHistory_v2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Customer" type="tns:Customer" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parameter" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Type" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDetailHistory_v2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDetailHistory_v2Result" type="tns:ArrayOfHistory_v2" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfHistory_v2">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="History_v2" nillable="true" type="tns:History_v2" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="History_v2">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:History">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="InvoiceNumber" nillable="true" type="s:int" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="SearchInHistory_Log">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Customer" type="tns:Customer" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parameter" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Type" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchInHistory_LogResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchInHistory_LogResult" type="tns:ArrayOfMovement" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="TESTSoapIn">
+    <wsdl:part name="parameters" element="tns:TEST" />
+  </wsdl:message>
+  <wsdl:message name="TESTSoapOut">
+    <wsdl:part name="parameters" element="tns:TESTResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoginSoapIn">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="LoginSoapOut">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="SearchPartSoapIn">
+    <wsdl:part name="parameters" element="tns:SearchPart" />
+  </wsdl:message>
+  <wsdl:message name="SearchPartSoapOut">
+    <wsdl:part name="parameters" element="tns:SearchPartResponse" />
+  </wsdl:message>
+  <wsdl:message name="SearchPartExSoapIn">
+    <wsdl:part name="parameters" element="tns:SearchPartEx" />
+  </wsdl:message>
+  <wsdl:message name="SearchPartExSoapOut">
+    <wsdl:part name="parameters" element="tns:SearchPartExResponse" />
+  </wsdl:message>
+  <wsdl:message name="QuotationSoapIn">
+    <wsdl:part name="parameters" element="tns:Quotation" />
+  </wsdl:message>
+  <wsdl:message name="QuotationSoapOut">
+    <wsdl:part name="parameters" element="tns:QuotationResponse" />
+  </wsdl:message>
+  <wsdl:message name="QuotationListSoapIn">
+    <wsdl:part name="parameters" element="tns:QuotationList" />
+  </wsdl:message>
+  <wsdl:message name="QuotationListSoapOut">
+    <wsdl:part name="parameters" element="tns:QuotationListResponse" />
+  </wsdl:message>
+  <wsdl:message name="QuotationList_v2SoapIn">
+    <wsdl:part name="parameters" element="tns:QuotationList_v2" />
+  </wsdl:message>
+  <wsdl:message name="QuotationList_v2SoapOut">
+    <wsdl:part name="parameters" element="tns:QuotationList_v2Response" />
+  </wsdl:message>
+  <wsdl:message name="InsertPartToBasketSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertPartToBasket" />
+  </wsdl:message>
+  <wsdl:message name="InsertPartToBasketSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertPartToBasketResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBasketDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBasketDetails" />
+  </wsdl:message>
+  <wsdl:message name="GetBasketDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBasketDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateBasketDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateBasketDetails" />
+  </wsdl:message>
+  <wsdl:message name="UpdateBasketDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateBasketDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteFromBasketSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteFromBasket" />
+  </wsdl:message>
+  <wsdl:message name="DeleteFromBasketSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteFromBasketResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomersIpSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCustomersIp" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomersIpSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCustomersIpResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteIpSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteIp" />
+  </wsdl:message>
+  <wsdl:message name="DeleteIpSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteIpResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertIpSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertIp" />
+  </wsdl:message>
+  <wsdl:message name="InsertIpSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertIpResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateIpSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateIp" />
+  </wsdl:message>
+  <wsdl:message name="UpdateIpSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateIpResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetListOfOrdersSoapIn">
+    <wsdl:part name="parameters" element="tns:GetListOfOrders" />
+  </wsdl:message>
+  <wsdl:message name="GetListOfOrdersSoapOut">
+    <wsdl:part name="parameters" element="tns:GetListOfOrdersResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFromInfoLogSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFromInfoLog" />
+  </wsdl:message>
+  <wsdl:message name="GetFromInfoLogSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFromInfoLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateOrderSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateOrder" />
+  </wsdl:message>
+  <wsdl:message name="CreateOrderSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="MovementByOrderNumberSoapIn">
+    <wsdl:part name="parameters" element="tns:MovementByOrderNumber" />
+  </wsdl:message>
+  <wsdl:message name="MovementByOrderNumberSoapOut">
+    <wsdl:part name="parameters" element="tns:MovementByOrderNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="MovementInWorkSoapIn">
+    <wsdl:part name="parameters" element="tns:MovementInWork" />
+  </wsdl:message>
+  <wsdl:message name="MovementInWorkSoapOut">
+    <wsdl:part name="parameters" element="tns:MovementInWorkResponse" />
+  </wsdl:message>
+  <wsdl:message name="MovementPurchasedSoapIn">
+    <wsdl:part name="parameters" element="tns:MovementPurchased" />
+  </wsdl:message>
+  <wsdl:message name="MovementPurchasedSoapOut">
+    <wsdl:part name="parameters" element="tns:MovementPurchasedResponse" />
+  </wsdl:message>
+  <wsdl:message name="MovementNotAvailableSoapIn">
+    <wsdl:part name="parameters" element="tns:MovementNotAvailable" />
+  </wsdl:message>
+  <wsdl:message name="MovementNotAvailableSoapOut">
+    <wsdl:part name="parameters" element="tns:MovementNotAvailableResponse" />
+  </wsdl:message>
+  <wsdl:message name="MovementReadyToSendSoapIn">
+    <wsdl:part name="parameters" element="tns:MovementReadyToSend" />
+  </wsdl:message>
+  <wsdl:message name="MovementReadyToSendSoapOut">
+    <wsdl:part name="parameters" element="tns:MovementReadyToSendResponse" />
+  </wsdl:message>
+  <wsdl:message name="MovementReceivedOnStockSoapIn">
+    <wsdl:part name="parameters" element="tns:MovementReceivedOnStock" />
+  </wsdl:message>
+  <wsdl:message name="MovementReceivedOnStockSoapOut">
+    <wsdl:part name="parameters" element="tns:MovementReceivedOnStockResponse" />
+  </wsdl:message>
+  <wsdl:message name="MovementSentSoapIn">
+    <wsdl:part name="parameters" element="tns:MovementSent" />
+  </wsdl:message>
+  <wsdl:message name="MovementSentSoapOut">
+    <wsdl:part name="parameters" element="tns:MovementSentResponse" />
+  </wsdl:message>
+  <wsdl:message name="MovementAGREESoapIn">
+    <wsdl:part name="parameters" element="tns:MovementAGREE" />
+  </wsdl:message>
+  <wsdl:message name="MovementAGREESoapOut">
+    <wsdl:part name="parameters" element="tns:MovementAGREEResponse" />
+  </wsdl:message>
+  <wsdl:message name="SearchInHistorySoapIn">
+    <wsdl:part name="parameters" element="tns:SearchInHistory" />
+  </wsdl:message>
+  <wsdl:message name="SearchInHistorySoapOut">
+    <wsdl:part name="parameters" element="tns:SearchInHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSubCustomersDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSubCustomersDetails" />
+  </wsdl:message>
+  <wsdl:message name="GetSubCustomersDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSubCustomersDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteSubCustomerSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteSubCustomer" />
+  </wsdl:message>
+  <wsdl:message name="DeleteSubCustomerSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteSubCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateSubCustomerSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateSubCustomer" />
+  </wsdl:message>
+  <wsdl:message name="UpdateSubCustomerSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateSubCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddSubCustomerSoapIn">
+    <wsdl:part name="parameters" element="tns:AddSubCustomer" />
+  </wsdl:message>
+  <wsdl:message name="AddSubCustomerSoapOut">
+    <wsdl:part name="parameters" element="tns:AddSubCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBoxesReadyToSendSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBoxesReadyToSend" />
+  </wsdl:message>
+  <wsdl:message name="GetBoxesReadyToSendSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBoxesReadyToSendResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBoxesInIvoiceSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBoxesInIvoice" />
+  </wsdl:message>
+  <wsdl:message name="GetBoxesInIvoiceSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBoxesInIvoiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetInvoicesListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetInvoicesList" />
+  </wsdl:message>
+  <wsdl:message name="GetInvoicesListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetInvoicesListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPackingDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPackingDetails" />
+  </wsdl:message>
+  <wsdl:message name="GetPackingDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPackingDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetInvoiceDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetInvoiceDetails" />
+  </wsdl:message>
+  <wsdl:message name="GetInvoiceDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetInvoiceDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="AllowCreateOrderSoapIn">
+    <wsdl:part name="parameters" element="tns:AllowCreateOrder" />
+  </wsdl:message>
+  <wsdl:message name="AllowCreateOrderSoapOut">
+    <wsdl:part name="parameters" element="tns:AllowCreateOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBalanceSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBalance" />
+  </wsdl:message>
+  <wsdl:message name="GetBalanceSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBalanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetAgreeSoapIn">
+    <wsdl:part name="parameters" element="tns:SetAgree" />
+  </wsdl:message>
+  <wsdl:message name="SetAgreeSoapOut">
+    <wsdl:part name="parameters" element="tns:SetAgreeResponse" />
+  </wsdl:message>
+  <wsdl:message name="SearchHistorySoapIn">
+    <wsdl:part name="parameters" element="tns:SearchHistory" />
+  </wsdl:message>
+  <wsdl:message name="SearchHistorySoapOut">
+    <wsdl:part name="parameters" element="tns:SearchHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="FindSameNumbersSoapIn">
+    <wsdl:part name="parameters" element="tns:FindSameNumbers" />
+  </wsdl:message>
+  <wsdl:message name="FindSameNumbersSoapOut">
+    <wsdl:part name="parameters" element="tns:FindSameNumbersResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDestinationsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDestinations" />
+  </wsdl:message>
+  <wsdl:message name="GetDestinationsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDestinationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCustDestinationsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCustDestinations" />
+  </wsdl:message>
+  <wsdl:message name="GetCustDestinationsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCustDestinationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBoxDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBoxDetails" />
+  </wsdl:message>
+  <wsdl:message name="GetBoxDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBoxDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDetailHistorySoapIn">
+    <wsdl:part name="parameters" element="tns:GetDetailHistory" />
+  </wsdl:message>
+  <wsdl:message name="GetDetailHistorySoapOut">
+    <wsdl:part name="parameters" element="tns:GetDetailHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDetailHistory_v2SoapIn">
+    <wsdl:part name="parameters" element="tns:GetDetailHistory_v2" />
+  </wsdl:message>
+  <wsdl:message name="GetDetailHistory_v2SoapOut">
+    <wsdl:part name="parameters" element="tns:GetDetailHistory_v2Response" />
+  </wsdl:message>
+  <wsdl:message name="SearchInHistory_LogSoapIn">
+    <wsdl:part name="parameters" element="tns:SearchInHistory_Log" />
+  </wsdl:message>
+  <wsdl:message name="SearchInHistory_LogSoapOut">
+    <wsdl:part name="parameters" element="tns:SearchInHistory_LogResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServiceSoap">
+    <wsdl:operation name="TEST">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Тестовый метод</wsdl:documentation>
+      <wsdl:input message="tns:TESTSoapIn" />
+      <wsdl:output message="tns:TESTSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Авторизация</wsdl:documentation>
+      <wsdl:input message="tns:LoginSoapIn" />
+      <wsdl:output message="tns:LoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchPart">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Поиск детали по номеру</wsdl:documentation>
+      <wsdl:input message="tns:SearchPartSoapIn" />
+      <wsdl:output message="tns:SearchPartSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchPartEx">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Поиск детали по номеру расширенный. Дополнительно задаются марка/прайслист/тип отгрузки в любой комбинации</wsdl:documentation>
+      <wsdl:input message="tns:SearchPartExSoapIn" />
+      <wsdl:output message="tns:SearchPartExSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Quotation">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Проценка списком</wsdl:documentation>
+      <wsdl:input message="tns:QuotationSoapIn" />
+      <wsdl:output message="tns:QuotationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QuotationList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Проценка списком (ускоренная)</wsdl:documentation>
+      <wsdl:input message="tns:QuotationListSoapIn" />
+      <wsdl:output message="tns:QuotationListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QuotationList_v2">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Проценка списком c доп. полями (ускоренная)</wsdl:documentation>
+      <wsdl:input message="tns:QuotationList_v2SoapIn" />
+      <wsdl:output message="tns:QuotationList_v2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertPartToBasket">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Помещение запчастей в корзину</wsdl:documentation>
+      <wsdl:input message="tns:InsertPartToBasketSoapIn" />
+      <wsdl:output message="tns:InsertPartToBasketSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBasketDetails">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Просмотр корзины</wsdl:documentation>
+      <wsdl:input message="tns:GetBasketDetailsSoapIn" />
+      <wsdl:output message="tns:GetBasketDetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBasketDetails">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Редактирование запчастей в корзине</wsdl:documentation>
+      <wsdl:input message="tns:UpdateBasketDetailsSoapIn" />
+      <wsdl:output message="tns:UpdateBasketDetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFromBasket">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Удаление запчастей из корзины</wsdl:documentation>
+      <wsdl:input message="tns:DeleteFromBasketSoapIn" />
+      <wsdl:output message="tns:DeleteFromBasketSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomersIp">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Просмотр ай-пи адресов приписанных клиенту</wsdl:documentation>
+      <wsdl:input message="tns:GetCustomersIpSoapIn" />
+      <wsdl:output message="tns:GetCustomersIpSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteIp">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Удаление ай-пи адреса из списка</wsdl:documentation>
+      <wsdl:input message="tns:DeleteIpSoapIn" />
+      <wsdl:output message="tns:DeleteIpSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertIp">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Добавление ай-пи адреса в список</wsdl:documentation>
+      <wsdl:input message="tns:InsertIpSoapIn" />
+      <wsdl:output message="tns:InsertIpSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateIp">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Редактирование описания ай-пи адреса</wsdl:documentation>
+      <wsdl:input message="tns:UpdateIpSoapIn" />
+      <wsdl:output message="tns:UpdateIpSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListOfOrders">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Список заказов клиента</wsdl:documentation>
+      <wsdl:input message="tns:GetListOfOrdersSoapIn" />
+      <wsdl:output message="tns:GetListOfOrdersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFromInfoLog">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Просмотр лога</wsdl:documentation>
+      <wsdl:input message="tns:GetFromInfoLogSoapIn" />
+      <wsdl:output message="tns:GetFromInfoLogSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrder">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Создание заказа</wsdl:documentation>
+      <wsdl:input message="tns:CreateOrderSoapIn" />
+      <wsdl:output message="tns:CreateOrderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MovementByOrderNumber">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Просмотр движения по номеру заказа</wsdl:documentation>
+      <wsdl:input message="tns:MovementByOrderNumberSoapIn" />
+      <wsdl:output message="tns:MovementByOrderNumberSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MovementInWork">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Просмотр движения по статусу 'В работе'</wsdl:documentation>
+      <wsdl:input message="tns:MovementInWorkSoapIn" />
+      <wsdl:output message="tns:MovementInWorkSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MovementPurchased">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Просмотр движения по статусу 'Закуплено'</wsdl:documentation>
+      <wsdl:input message="tns:MovementPurchasedSoapIn" />
+      <wsdl:output message="tns:MovementPurchasedSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MovementNotAvailable">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Просмотр движения по статусу 'Нет в наличии'</wsdl:documentation>
+      <wsdl:input message="tns:MovementNotAvailableSoapIn" />
+      <wsdl:output message="tns:MovementNotAvailableSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MovementReadyToSend">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Просмотр движения по статусу 'Готово к отправке'</wsdl:documentation>
+      <wsdl:input message="tns:MovementReadyToSendSoapIn" />
+      <wsdl:output message="tns:MovementReadyToSendSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MovementReceivedOnStock">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Просмотр движения по статусу 'Получено на склад'</wsdl:documentation>
+      <wsdl:input message="tns:MovementReceivedOnStockSoapIn" />
+      <wsdl:output message="tns:MovementReceivedOnStockSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MovementSent">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Просмотр движения по статусу 'Отправлено'</wsdl:documentation>
+      <wsdl:input message="tns:MovementSentSoapIn" />
+      <wsdl:output message="tns:MovementSentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MovementAGREE">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Просмотр движения по статусу 'AGREE'</wsdl:documentation>
+      <wsdl:input message="tns:MovementAGREESoapIn" />
+      <wsdl:output message="tns:MovementAGREESoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchInHistory">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Просмотр истории заказов</wsdl:documentation>
+      <wsdl:input message="tns:SearchInHistorySoapIn" />
+      <wsdl:output message="tns:SearchInHistorySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSubCustomersDetails">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Просмотр списка конечных клиентов</wsdl:documentation>
+      <wsdl:input message="tns:GetSubCustomersDetailsSoapIn" />
+      <wsdl:output message="tns:GetSubCustomersDetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSubCustomer">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Удаление конечного клиента</wsdl:documentation>
+      <wsdl:input message="tns:DeleteSubCustomerSoapIn" />
+      <wsdl:output message="tns:DeleteSubCustomerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSubCustomer">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Редактирование конечного клиента</wsdl:documentation>
+      <wsdl:input message="tns:UpdateSubCustomerSoapIn" />
+      <wsdl:output message="tns:UpdateSubCustomerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddSubCustomer">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Добавление конечного клиента</wsdl:documentation>
+      <wsdl:input message="tns:AddSubCustomerSoapIn" />
+      <wsdl:output message="tns:AddSubCustomerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBoxesReadyToSend">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Просмотр коробок для отгрузки</wsdl:documentation>
+      <wsdl:input message="tns:GetBoxesReadyToSendSoapIn" />
+      <wsdl:output message="tns:GetBoxesReadyToSendSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBoxesInIvoice">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Просмотр коробок в инвойсе</wsdl:documentation>
+      <wsdl:input message="tns:GetBoxesInIvoiceSoapIn" />
+      <wsdl:output message="tns:GetBoxesInIvoiceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInvoicesList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Просмотр списка инвойсов</wsdl:documentation>
+      <wsdl:input message="tns:GetInvoicesListSoapIn" />
+      <wsdl:output message="tns:GetInvoicesListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPackingDetails">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Просмотр паклиста</wsdl:documentation>
+      <wsdl:input message="tns:GetPackingDetailsSoapIn" />
+      <wsdl:output message="tns:GetPackingDetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInvoiceDetails">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Просмотр инвойса</wsdl:documentation>
+      <wsdl:input message="tns:GetInvoiceDetailsSoapIn" />
+      <wsdl:output message="tns:GetInvoiceDetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AllowCreateOrder">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Просмотр данных для размещения заказа</wsdl:documentation>
+      <wsdl:input message="tns:AllowCreateOrderSoapIn" />
+      <wsdl:output message="tns:AllowCreateOrderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBalance">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Просмотр баланса</wsdl:documentation>
+      <wsdl:input message="tns:GetBalanceSoapIn" />
+      <wsdl:output message="tns:GetBalanceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetAgree">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Проставить AGREE по позиции и перезаказать под старым номером заказа</wsdl:documentation>
+      <wsdl:input message="tns:SetAgreeSoapIn" />
+      <wsdl:output message="tns:SetAgreeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchHistory">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Просмотр истории поиска</wsdl:documentation>
+      <wsdl:input message="tns:SearchHistorySoapIn" />
+      <wsdl:output message="tns:SearchHistorySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FindSameNumbers">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Поиск похожих номеров</wsdl:documentation>
+      <wsdl:input message="tns:FindSameNumbersSoapIn" />
+      <wsdl:output message="tns:FindSameNumbersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDestinations">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Доступные типы отправок по прайсу</wsdl:documentation>
+      <wsdl:input message="tns:GetDestinationsSoapIn" />
+      <wsdl:output message="tns:GetDestinationsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustDestinations">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Доступные типы отправок для клиента по прайсу</wsdl:documentation>
+      <wsdl:input message="tns:GetCustDestinationsSoapIn" />
+      <wsdl:output message="tns:GetCustDestinationsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBoxDetails">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Просмотр содержимого коробки</wsdl:documentation>
+      <wsdl:input message="tns:GetBoxDetailsSoapIn" />
+      <wsdl:output message="tns:GetBoxDetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDetailHistory">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Просмотр истории по детали (устаревший)</wsdl:documentation>
+      <wsdl:input message="tns:GetDetailHistorySoapIn" />
+      <wsdl:output message="tns:GetDetailHistorySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDetailHistory_v2">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Просмотр истории по детали</wsdl:documentation>
+      <wsdl:input message="tns:GetDetailHistory_v2SoapIn" />
+      <wsdl:output message="tns:GetDetailHistory_v2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchInHistory_Log">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Просмотр истории заказов - полная хронология</wsdl:documentation>
+      <wsdl:input message="tns:SearchInHistory_LogSoapIn" />
+      <wsdl:output message="tns:SearchInHistory_LogSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceSoap" type="tns:ServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="TEST">
+      <soap:operation soapAction="http://emexonline.com:3000/MaximaWS/TEST" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://emexonline.com:3000/MaximaWS/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchPart">
+      <soap:operation soapAction="http://emexonline.com:3000/MaximaWS/SearchPart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchPartEx">
+      <soap:operation soapAction="http://emexonline.com:3000/MaximaWS/SearchPartEx" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Quotation">
+      <soap:operation soapAction="http://emexonline.com:3000/MaximaWS/Quotation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QuotationList">
+      <soap:operation soapAction="http://emexonline.com:3000/MaximaWS/QuotationList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QuotationList_v2">
+      <soap:operation soapAction="http://emexonline.com:3000/MaximaWS/QuotationList_v2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertPartToBasket">
+      <soap:operation soapAction="http://emexonline.com:3000/MaximaWS/InsertPartToBasket" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBasketDetails">
+      <soap:operation soapAction="http://emexonline.com:3000/MaximaWS/GetBasketDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBasketDetails">
+      <soap:operation soapAction="http://emexonline.com:3000/MaximaWS/UpdateBasketDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFromBasket">
+      <soap:operation soapAction="http://emexonline.com:3000/MaximaWS/DeleteFromBasket" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomersIp">
+      <soap:operation soapAction="http://emexonline.com:3000/MaximaWS/GetCustomersIp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteIp">
+      <soap:operation soapAction="http://emexonline.com:3000/MaximaWS/DeleteIp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertIp">
+      <soap:operation soapAction="http://emexonline.com:3000/MaximaWS/InsertIp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateIp">
+      <soap:operation soapAction="http://emexonline.com:3000/MaximaWS/UpdateIp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListOfOrders">
+      <soap:operation soapAction="http://emexonline.com:3000/MaximaWS/GetListOfOrders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFromInfoLog">
+      <soap:operation soapAction="http://emexonline.com:3000/MaximaWS/GetFromInfoLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrder">
+      <soap:operation soapAction="http://emexonline.com:3000/MaximaWS/CreateOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MovementByOrderNumber">
+      <soap:operation soapAction="http://emexonline.com:3000/MaximaWS/MovementByOrderNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MovementInWork">
+      <soap:operation soapAction="http://emexonline.com:3000/MaximaWS/MovementInWork" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MovementPurchased">
+      <soap:operation soapAction="http://emexonline.com:3000/MaximaWS/MovementPurchased" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MovementNotAvailable">
+      <soap:operation soapAction="http://emexonline.com:3000/MaximaWS/MovementNotAvailable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MovementReadyToSend">
+      <soap:operation soapAction="http://emexonline.com:3000/MaximaWS/MovementReadyToSend" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MovementReceivedOnStock">
+      <soap:operation soapAction="http://emexonline.com:3000/MaximaWS/MovementReceivedOnStock" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MovementSent">
+      <soap:operation soapAction="http://emexonline.com:3000/MaximaWS/MovementSent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MovementAGREE">
+      <soap:operation soapAction="http://emexonline.com:3000/MaximaWS/MovementAGREE" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchInHistory">
+      <soap:operation soapAction="http://emexonline.com:3000/MaximaWS/SearchInHistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSubCustomersDetails">
+      <soap:operation soapAction="http://emexonline.com:3000/MaximaWS/GetSubCustomersDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSubCustomer">
+      <soap:operation soapAction="http://emexonline.com:3000/MaximaWS/DeleteSubCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSubCustomer">
+      <soap:operation soapAction="http://emexonline.com:3000/MaximaWS/UpdateSubCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddSubCustomer">
+      <soap:operation soapAction="http://emexonline.com:3000/MaximaWS/AddSubCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBoxesReadyToSend">
+      <soap:operation soapAction="http://emexonline.com:3000/MaximaWS/GetBoxesReadyToSend" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBoxesInIvoice">
+      <soap:operation soapAction="http://emexonline.com:3000/MaximaWS/GetBoxesInIvoice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInvoicesList">
+      <soap:operation soapAction="http://emexonline.com:3000/MaximaWS/GetInvoicesList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPackingDetails">
+      <soap:operation soapAction="http://emexonline.com:3000/MaximaWS/GetPackingDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInvoiceDetails">
+      <soap:operation soapAction="http://emexonline.com:3000/MaximaWS/GetInvoiceDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AllowCreateOrder">
+      <soap:operation soapAction="http://emexonline.com:3000/MaximaWS/AllowCreateOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBalance">
+      <soap:operation soapAction="http://emexonline.com:3000/MaximaWS/GetBalance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetAgree">
+      <soap:operation soapAction="http://emexonline.com:3000/MaximaWS/SetAgree" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchHistory">
+      <soap:operation soapAction="http://emexonline.com:3000/MaximaWS/SearchHistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindSameNumbers">
+      <soap:operation soapAction="http://emexonline.com:3000/MaximaWS/FindSameNumbers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDestinations">
+      <soap:operation soapAction="http://emexonline.com:3000/MaximaWS/GetDestinations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustDestinations">
+      <soap:operation soapAction="http://emexonline.com:3000/MaximaWS/GetCustDestinations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBoxDetails">
+      <soap:operation soapAction="http://emexonline.com:3000/MaximaWS/GetBoxDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDetailHistory">
+      <soap:operation soapAction="http://emexonline.com:3000/MaximaWS/GetDetailHistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDetailHistory_v2">
+      <soap:operation soapAction="http://emexonline.com:3000/MaximaWS/GetDetailHistory_v2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchInHistory_Log">
+      <soap:operation soapAction="http://emexonline.com:3000/MaximaWS/SearchInHistory_Log" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceSoap12" type="tns:ServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="TEST">
+      <soap12:operation soapAction="http://emexonline.com:3000/MaximaWS/TEST" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap12:operation soapAction="http://emexonline.com:3000/MaximaWS/Login" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchPart">
+      <soap12:operation soapAction="http://emexonline.com:3000/MaximaWS/SearchPart" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchPartEx">
+      <soap12:operation soapAction="http://emexonline.com:3000/MaximaWS/SearchPartEx" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Quotation">
+      <soap12:operation soapAction="http://emexonline.com:3000/MaximaWS/Quotation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QuotationList">
+      <soap12:operation soapAction="http://emexonline.com:3000/MaximaWS/QuotationList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QuotationList_v2">
+      <soap12:operation soapAction="http://emexonline.com:3000/MaximaWS/QuotationList_v2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertPartToBasket">
+      <soap12:operation soapAction="http://emexonline.com:3000/MaximaWS/InsertPartToBasket" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBasketDetails">
+      <soap12:operation soapAction="http://emexonline.com:3000/MaximaWS/GetBasketDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBasketDetails">
+      <soap12:operation soapAction="http://emexonline.com:3000/MaximaWS/UpdateBasketDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFromBasket">
+      <soap12:operation soapAction="http://emexonline.com:3000/MaximaWS/DeleteFromBasket" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomersIp">
+      <soap12:operation soapAction="http://emexonline.com:3000/MaximaWS/GetCustomersIp" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteIp">
+      <soap12:operation soapAction="http://emexonline.com:3000/MaximaWS/DeleteIp" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertIp">
+      <soap12:operation soapAction="http://emexonline.com:3000/MaximaWS/InsertIp" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateIp">
+      <soap12:operation soapAction="http://emexonline.com:3000/MaximaWS/UpdateIp" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListOfOrders">
+      <soap12:operation soapAction="http://emexonline.com:3000/MaximaWS/GetListOfOrders" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFromInfoLog">
+      <soap12:operation soapAction="http://emexonline.com:3000/MaximaWS/GetFromInfoLog" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrder">
+      <soap12:operation soapAction="http://emexonline.com:3000/MaximaWS/CreateOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MovementByOrderNumber">
+      <soap12:operation soapAction="http://emexonline.com:3000/MaximaWS/MovementByOrderNumber" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MovementInWork">
+      <soap12:operation soapAction="http://emexonline.com:3000/MaximaWS/MovementInWork" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MovementPurchased">
+      <soap12:operation soapAction="http://emexonline.com:3000/MaximaWS/MovementPurchased" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MovementNotAvailable">
+      <soap12:operation soapAction="http://emexonline.com:3000/MaximaWS/MovementNotAvailable" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MovementReadyToSend">
+      <soap12:operation soapAction="http://emexonline.com:3000/MaximaWS/MovementReadyToSend" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MovementReceivedOnStock">
+      <soap12:operation soapAction="http://emexonline.com:3000/MaximaWS/MovementReceivedOnStock" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MovementSent">
+      <soap12:operation soapAction="http://emexonline.com:3000/MaximaWS/MovementSent" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MovementAGREE">
+      <soap12:operation soapAction="http://emexonline.com:3000/MaximaWS/MovementAGREE" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchInHistory">
+      <soap12:operation soapAction="http://emexonline.com:3000/MaximaWS/SearchInHistory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSubCustomersDetails">
+      <soap12:operation soapAction="http://emexonline.com:3000/MaximaWS/GetSubCustomersDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSubCustomer">
+      <soap12:operation soapAction="http://emexonline.com:3000/MaximaWS/DeleteSubCustomer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSubCustomer">
+      <soap12:operation soapAction="http://emexonline.com:3000/MaximaWS/UpdateSubCustomer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddSubCustomer">
+      <soap12:operation soapAction="http://emexonline.com:3000/MaximaWS/AddSubCustomer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBoxesReadyToSend">
+      <soap12:operation soapAction="http://emexonline.com:3000/MaximaWS/GetBoxesReadyToSend" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBoxesInIvoice">
+      <soap12:operation soapAction="http://emexonline.com:3000/MaximaWS/GetBoxesInIvoice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInvoicesList">
+      <soap12:operation soapAction="http://emexonline.com:3000/MaximaWS/GetInvoicesList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPackingDetails">
+      <soap12:operation soapAction="http://emexonline.com:3000/MaximaWS/GetPackingDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInvoiceDetails">
+      <soap12:operation soapAction="http://emexonline.com:3000/MaximaWS/GetInvoiceDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AllowCreateOrder">
+      <soap12:operation soapAction="http://emexonline.com:3000/MaximaWS/AllowCreateOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBalance">
+      <soap12:operation soapAction="http://emexonline.com:3000/MaximaWS/GetBalance" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetAgree">
+      <soap12:operation soapAction="http://emexonline.com:3000/MaximaWS/SetAgree" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchHistory">
+      <soap12:operation soapAction="http://emexonline.com:3000/MaximaWS/SearchHistory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindSameNumbers">
+      <soap12:operation soapAction="http://emexonline.com:3000/MaximaWS/FindSameNumbers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDestinations">
+      <soap12:operation soapAction="http://emexonline.com:3000/MaximaWS/GetDestinations" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustDestinations">
+      <soap12:operation soapAction="http://emexonline.com:3000/MaximaWS/GetCustDestinations" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBoxDetails">
+      <soap12:operation soapAction="http://emexonline.com:3000/MaximaWS/GetBoxDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDetailHistory">
+      <soap12:operation soapAction="http://emexonline.com:3000/MaximaWS/GetDetailHistory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDetailHistory_v2">
+      <soap12:operation soapAction="http://emexonline.com:3000/MaximaWS/GetDetailHistory_v2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchInHistory_Log">
+      <soap12:operation soapAction="http://emexonline.com:3000/MaximaWS/SearchInHistory_Log" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="ServiceSoap" binding="tns:ServiceSoap">
+      <soap:address location="http://emexonline.com:3000/MaximaWS/Service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceSoap12" binding="tns:ServiceSoap12">
+      <soap12:address location="http://emexonline.com:3000/MaximaWS/Service.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,6 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\CreateOrderEmex"
   ],
+  "SelectedNode": "\\CreateOrderEmex\\MainFrm.cs",
   "PreviewInSolutionExplorer": false
 }

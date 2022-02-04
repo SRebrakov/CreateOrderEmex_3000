@@ -75,3 +75,12 @@
 2016-12-27 22:14:57.9935 CreateOrderEmex.MainForm Finish
 2017-01-19 14:25:41.9727 CreateOrderEmex.MainForm Start
 2017-01-19 14:27:43.2593 CreateOrderEmex.MainForm Start
+2022-02-03 14:48:03.1334 CreateOrderEmex.MainForm Start
+2022-02-03 14:48:18.7263 CreateOrderEmex.MainForm При установлении соединения с SQL Server произошла ошибка, связанная с сетью или с определенным экземпляром. Сервер не найден или недоступен. Убедитесь, что имя экземпляра указано правильно и что на SQL Server разрешены удаленные соединения. (provider: TCP Provider, error: 0 - Время ожидания операции истекло.)
+2022-02-03 14:48:18.7263 CreateOrderEmex.MainForm Finish
+2022-02-03 14:48:24.5955 CreateOrderEmex.MainForm Start
+2022-02-03 14:48:38.4745 CreateOrderEmex.MainForm Start
+2022-02-03 14:49:09.7332 CreateOrderEmex.MainForm Start
+2022-02-03 14:49:25.2791 CreateOrderEmex.MainForm При установлении соединения с SQL Server произошла ошибка, связанная с сетью или с определенным экземпляром. Сервер не найден или недоступен. Убедитесь, что имя экземпляра указано правильно и что на SQL Server разрешены удаленные соединения. (provider: TCP Provider, error: 0 - Время ожидания операции истекло.)
+2022-02-03 14:49:25.2802 CreateOrderEmex.MainForm Finish
+2022-02-03 14:50:34.3857 CreateOrderEmex.MainForm Start

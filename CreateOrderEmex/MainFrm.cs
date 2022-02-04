@@ -24,11 +24,15 @@ using System.Net.Mime;
 
 namespace CreateOrderEmex
 {
+
+  
     public partial class MainForm : Form
     {
+        public EmexReference.Customer customer = new EmexReference.Customer();
+        public EmexReference.ServiceSoapClient soap = new EmexReference.ServiceSoapClient();
+
         static string MegaLogin = string.Empty;
         static string MegaPassword = string.Empty;
-        static ServiceReference1.AuthenticationServiceClient authClient;
         static string ticketMega;
         static string SupplierLogo = string.Empty;
         SqlConnection myConnection;
@@ -80,7 +84,7 @@ namespace CreateOrderEmex
             MegaPassword = tbPassword.Text;
         }
 
-
+        
         private void CreateOrder()
         {
             bwork = true;
@@ -89,11 +93,11 @@ namespace CreateOrderEmex
             bExit.Enabled = false;
            
             int nstr = 0;
-            ServiceReference2.BasketItem[] BI;
-            ServiceReference2.BalanceInfo BL = new ServiceReference2.BalanceInfo();
-            ServiceReference2.InsertToBasketItem[] arr;
-            ServiceReference2.CreateOrder_Result CreateOrder = new ServiceReference2.CreateOrder_Result();
-            ServiceReference2.OrderInfo OrderInfo = new ServiceReference2.OrderInfo();
+            EmexReference.BasketDetails[] BI;
+            EmexReference.Balance BL = new EmexReference.Balance();
+            EmexReference.partstobasket[] arr;
+            //  EmexReference.CreateOrder_Result CreateOrder = new EmexReference.CreateOrder_Result();
+            EmexReference.ListOfOrders OrderInfo = new EmexReference.ListOfOrders();
             System.Data.SqlClient.SqlCommand sqlcom;
             System.Data.SqlClient.SqlCommand sqlcomplete;
             System.Data.SqlClient.SqlCommand sqlproc;
@@ -114,75 +118,7 @@ namespace CreateOrderEmex
             logger.Log(LogLevel.Debug, "Start");
             textBox1.Text = "Start";
             sqlcomplete = new SqlCommand();
-          /*  int ord = 0;
-            int kk = 50;
-                        while (true) {
-                            ord = ord + 1;
-                            authClient = new ServiceReference1.AuthenticationServiceClient();
-
-                            if (authClient.State == CommunicationState.Closed)
-                                authClient.Open();
-
-                            ticketMega = AuthenticateMega();
-
-                             InvokeMegaService(() => { StoreApi.EmptyBasket(); });
-
-                             arr = new ServiceReference2.InsertToBasketItem[kk];
-                             for (int j = 0; j <kk; j++)
-                             {
-                                 arr[j] = new ServiceReference2.InsertToBasketItem();
-                                 arr[j].Comments = "Coment test"; //коментарий
-                                 arr[j].DetailNum = "38913AA101"; //Details.Rows[k]["Articul"].ToString();  // номер детали
-                                 arr[j].Quantity = 1;  // кол-во
-                                 arr[j].MakeLogo = "SU";///Details.Rows[k]["Brand"].ToString();
-                                 arr[j].CoeffMaxAgree = 1;
-                                 arr[0].PriceLogo = "EMIR";
-                                 //  arr[k].CustomerSubId = Convert.ToInt64(Details.Rows[k]["InternalOrderDetailId"]);
-                                 // arr[0].CustomerSubId = 0;
-                                 // arr[0].UploadedPrice = 0;
-                                 arr[j].Reference = "";
-                                 arr[j].DestinationLogo = "EMEW";
-                                 arr[j].CustomerStickerData = "";
-                             }
-                             InvokeMegaService(() => { StoreApi.InsertBasketItemsToBasket(arr); });
-
-                             BI = new ServiceReference2.BasketItem[kk];
-                             InvokeMegaService(() => { BI = StoreApi.GetBasket(); });
-                             for (int j = 0; j < kk; j++)
-                             {
-                                 BI[j].bitConfirm = true;
-
-                                 InvokeMegaService(() =>
-                                 {
-                                     StoreApi.UpdateBasket(
-                                         BI[j].BasketItemId
-                                         , BI[j].Quantity
-                                         , BI[j].DestinationLogo
-                                         , (bool)BI[j].bitONLY
-                                         , (bool)BI[j].bitAGREE
-                                         , (bool)BI[j].bitWait
-                                         , (bool)BI[j].bitConfirm
-                                         , (bool)BI[j].bitBrand
-                                         , BI[j].Reference
-                                         , (long)BI[j].CustomerSubId
-                                         , BI[j].Comments
-                                         , (decimal)BI[j].CoeffMaxAgree
-                                         , (decimal)BI[j].UploadedPrice);
-                                 });
-                             }
-                            InvokeMegaService(() => { CreateOrder = StoreApi.CreateOrder(); });
-                            logger.Log(LogLevel.Debug, ord.ToString() +" "+CreateOrder.OrderNumber);
-                          //   logger.Log(LogLevel.Debug, ord.ToString());
-                            InvokeMegaService(() => { StoreApi.EmptyBasket(); });
-                           // Thread.Sleep(100);
-
-                            authClient.Logout();
-                            authClient.Close();
-                            
-
-            
-                        }*/
-                        
+         
             while (bwork == true)
             {
   
@@ -203,17 +139,17 @@ namespace CreateOrderEmex
 
                     for (int i = 0; i < SupplierHeder.Rows.Count; i++)
                     {
+                       
+                        customer.UserName = "QXXX";
+                        customer.Password = "qXQx";
+                        customer.CustomerId = null;
+                        customer.SubCustomerId = null;
 
-                        authClient = new ServiceReference1.AuthenticationServiceClient();
+                        customer = soap.Login(customer);
 
-                        if (authClient.State == CommunicationState.Closed)
-                          authClient.Open();
+                        BI=soap.GetBasketDetails(customer);
 
-                        ticketMega = AuthenticateMega();
-
-                        InvokeMegaService(() => { StoreApi.EmptyBasket(); });
-
-                      //  authClient.Open();
+                        soap.DeleteFromBasket(customer, BI);
 
                         myConnection.Close();
                         myConnection.Open();
@@ -225,60 +161,45 @@ namespace CreateOrderEmex
                         Details.Clear();
                         Details.Load(sqldr);
 
-                        arr = new ServiceReference2.InsertToBasketItem[Details.Rows.Count];
+                        arr = new EmexReference.partstobasket[Details.Rows.Count];
                         kol = Details.Rows.Count;
+
+                       
 
                         if (kol == 0) { continue; }
 
                         for (int k = 0; k < kol; k++)
                         {
-                            arr[k] = new ServiceReference2.InsertToBasketItem();
-                            arr[k].Comments = Details.Rows[k]["Comment"].ToString(); //коментарий
+                            arr[k] = new EmexReference.partstobasket();
+                          //arr[k].Comments = Details.Rows[k]["Comment"].ToString(); //коментарий
                             arr[k].DetailNum = Details.Rows[k]["Articul"].ToString();  // номер детали
                             arr[k].Quantity = Convert.ToInt32(Details.Rows[k]["Quantity"]);  // кол-во
                             arr[k].MakeLogo = Details.Rows[k]["Brand"].ToString();
-                            arr[k].CoeffMaxAgree = Convert.ToDecimal(Details.Rows[k]["CoeffPriceAgree"].ToString());                                
+                            arr[k].CoeffMaxAgree = Convert.ToDouble(Details.Rows[k]["CoeffPriceAgree"].ToString());                                
                             arr[k].PriceLogo = Details.Rows[k]["PriceLogo"].ToString();
-                          //  arr[k].CustomerSubId = Convert.ToInt64(Details.Rows[k]["InternalOrderDetailId"]);
                             arr[k].CustomerSubId = Convert.ToInt64(Details.Rows[k]["ReferenceId"]);
-                            arr[k].UploadedPrice = Convert.ToDecimal(Details.Rows[k]["Price"]);
+                            arr[k].UploadedPrice = Convert.ToDouble(Details.Rows[k]["Price"]);
                             arr[k].Reference = Details.Rows[k]["InternalOrderDetailId"].ToString();
                             arr[k].DestinationLogo = Details.Rows[k]["DestinationLogo"].ToString();
                             arr[k].CustomerStickerData = Details.Rows[k]["StickerData"].ToString();
-                            arr[k].bitONLY = Convert.ToBoolean(Details.Rows[k]["bitONLY"]);
-                            arr[k].bitBrand = Convert.ToBoolean(Details.Rows[k]["bitBrand"]);
+                         //  arr[k].bitONLY = Convert.ToBoolean(Details.Rows[k]["bitONLY"]);
+                         //  arr[k].bitBrand = Convert.ToBoolean(Details.Rows[k]["bitBrand"]);
 
                         }
-                        InvokeMegaService(() => { StoreApi.InsertBasketItemsToBasket(arr); });
-                     //   return;
-                        BI = new ServiceReference2.BasketItem[Details.Rows.Count];
-                        InvokeMegaService(() => { BI = StoreApi.GetBasket(); });
+                        soap.InsertPartToBasket(customer, arr);
+                        //   return;
+
+                        // возможно понадобиться очистка BI
+                        BI = soap.GetBasketDetails(customer);
 
                         // InvokeMegaService(() => { StoreApi.AllToOrderBasket(); });
                         for (int j = 0; j < BI.Count(); j++)
                         {
                             nextdetail = true;
                             
-                          /* не помню для чего 27.12.2016
-                            for (DetId = 0; DetId < kol + 1; DetId++)
-                            {
-                                if (DetId == kol)
-                                {
-                                    logger.Log(LogLevel.Debug, "Неизвестная деталь! DetailId = " + DetId.ToString());
-                                    nextdetail = false;
-                                    break;
-                                }
-
-                                if (BI[j].Reference == Details.Rows[DetId]["InternalOrderDetailId"].ToString())
-                                    break;
-
-                            }
-                           */
+                          
                             if (nextdetail == false) { continue; }
-
-                        /*    if (BI[j].Price > ((Convert.ToDecimal(Details.Rows[DetId]["Price"])) + (Convert.ToDecimal(Details.Rows[DetId]["CoeffPriceAgree"]))))
-                            {
-                            */
+                               
                                 IsAccepted = 0;
                                 sqlproc = new SqlCommand();
                                 sqlproc.Connection = myConnection;
@@ -308,140 +229,66 @@ namespace CreateOrderEmex
                                 {
                                     BI[j].bitConfirm = true;
                                 }
-
-                           /* }
-                            else
-                            {
-                                BI[j].bitConfirm = true;
-                            }
-                            */
-                            if (BI[j].bitConfirm == true)
-                            {
-                               InvokeMegaService(() =>
-                               {
-                                   StoreApi.UpdateBasket(
-                                         BI[j].BasketItemId
-                                       , BI[j].Quantity
-                                       , BI[j].DestinationLogo
-                                       , (bool)BI[j].bitONLY
-                                       , (bool)BI[j].bitAGREE
-                                       , (bool)BI[j].bitWait
-                                       , (bool)BI[j].bitConfirm
-                                       , (bool)BI[j].bitBrand
-                                       , BI[j].Reference
-                                       , (long)BI[j].CustomerSubId
-                                       , BI[j].Comments
-                                       , (decimal)BI[j].CoeffMaxAgree
-                                       , (decimal)BI[j].UploadedPrice);
-                               });
-                               temstr = "UpdateBasket:"
-                                        + " BasketItemId=" +BI[j].BasketItemId.ToString()
-                                        + " DetailNum=" + BI[j].DetailNum.ToString()
-                                        + " MakeLogo=" + BI[j].MakeLogo.ToString()
-                                        + " Quantity=" + BI[j].Quantity.ToString()
-                                        + " DestinationLogo=" + BI[j].DestinationLogo.ToString()
-                                        + " bitONLY=" + BI[j].bitONLY.ToString()
-                                        + " bitAGREE=" + BI[j].bitAGREE.ToString()
-                                        + " bitWait=" + BI[j].bitWait.ToString()
-                                        + " bitConfirm=" + BI[j].bitConfirm.ToString()
-                                        + " bitBrand=" + BI[j].bitBrand.ToString()
-                                        + " Reference=" + BI[j].Reference.ToString()
-                                        + " CustomerSubId=" + BI[j].CustomerSubId.ToString()
-                                        + " Comments=" + BI[j].Comments.ToString()
-                                        + " CoeffMaxAgree=" + BI[j].CoeffMaxAgree.ToString()
-                                        + " UploadedPrice=" + BI[j].UploadedPrice.ToString();
-
-                               textBox1.Text = textBox1.Text + "\r\n" + temstr;
-                               logger.Log(LogLevel.Debug, temstr);
-                               Application.DoEvents();
-
-                            }
-
-
-                        
                         }
-                        neadorder = true;
+
+                        soap.UpdateBasketDetails(customer, BI);
+                        neadorder = false;
                         for (int j = 0; j < BI.Count(); j++)
                         {
-                            if (BI[j].bitConfirm == false) {
-                                neadorder = false;
-                                ResultText = "UpdateBasket not confirm details";
-                                ResultCode = -10000;
+                            if (BI[j].bitConfirm == true) {
+                                neadorder = true;
+                                
                                 break;
                             }
+                        }
+
+                        if (neadorder == false)
+                        {
+                            ResultText = "UpdateBasket not confirm details";
+                            ResultCode = -10000;
                         }
 
                         
                         if (neadorder == true)
                         {
-                             
-                            InvokeMegaService(() => { CreateOrder = StoreApi.CreateOrder(); });
-                                                        
+
+                            int CreateOrderRes= soap.CreateOrder(customer);
+                           
+                             /*                           
                             if (CreateOrder.OrderNumber.ToString().Length == 0) {
                                 CreateOrder.OrderNumber = 0;
                             }
-
+                             */
                         
-                            if  (CreateOrder.OrderNumber > 0)
+                            if (CreateOrderRes != 0)
                             {
-                                textBox1.Text = textBox1.Text + "\r\n OrderNumber = " + CreateOrder.OrderNumber.ToString();
-                                logger.Log(LogLevel.Debug, "OrderNumber = " + CreateOrder.OrderNumber.ToString());
-                                ResultText = "OrderNumber = " + CreateOrder.OrderNumber.ToString();
+                                textBox1.Text = textBox1.Text + "\r\n Create order ok";
+                                logger.Log(LogLevel.Debug, "Create order ok");
+                                ResultText = "Create order ok";
                                 ResultCode = 0;
 
-                                if (CreateOrder.PaymentId != null)
-                                {
-                                    logger.Log(LogLevel.Debug, "PaymentId = " + CreateOrder.PaymentId.ToString());
-                                    textBox1.Text = textBox1.Text + "\r\n PaymentId = " + CreateOrder.PaymentId.ToString();
-                                }
                             }
                             else
                             {
                                 ResultText = "Error CreateOrder";
-                                if (CreateOrder.OrderNumber == 0)
-                                {
-                                    ResultCode = -1000;
-                                }
-                                else
-                                {
-                                    ResultCode = Convert.ToInt32(CreateOrder.OrderNumber);
-                                }
+                                ResultCode = CreateOrderRes;
                             }
                         }
                         else {
-                            if (ResultCode != -10000)
-                            {
-                                ResultText = "needorder = false.StoreApi.UpdateBasket not confirm details";
-                                ResultCode = -4;
-                            }
+                             ResultText = "needorder = false.StoreApi.UpdateBasket not confirm details";
+                             ResultCode = -4;
                         }
 
                         logger.Log(LogLevel.Debug, ResultText + ". ResultCode=" + ResultCode.ToString());
                         sqlcomplete.CommandText = "exec dbo.p_SupplierOrder_Export_Complete @HeadId=" + SupplierHeder.Rows[i][0].ToString() + ",@ResultCode = " + ResultCode.ToString() +",@ResultText='" + ResultText + "'";
-                        drcomplete = sqlcomplete.ExecuteReader();
-                        drcomplete.Close(); 
+                       // drcomplete = sqlcomplete.ExecuteReader();
+                       // drcomplete.Close();
 
-                        /*
-                        InvokeMegaService(() => { OrderInfo = StoreApi.GetOrderInfo(); });
-                        textBox1.Text = textBox1.Text + "\r\n OrderInfo *************************";
-                        textBox1.Text = textBox1.Text + "\r\n Amount = " + OrderInfo.Amount.ToString();
-                        textBox1.Text = textBox1.Text + "\r\n AmountOrder = " + OrderInfo.AmountOrder.ToString();
-                        textBox1.Text = textBox1.Text + "\r\n Lines = " + OrderInfo.Lines.ToString();
-                        textBox1.Text = textBox1.Text + "\r\n LinesOrder = " + OrderInfo.LinesOrder.ToString();
-                        textBox1.Text = textBox1.Text + "\r\n NumNextOrder = " + OrderInfo.NumNextOrder.ToString();
-                        textBox1.Text = textBox1.Text + "\r\n Quantity = " + OrderInfo.Quantity.ToString();
-                        textBox1.Text = textBox1.Text + "\r\n QuantityOrder = " + OrderInfo.QuantityOrder.ToString();
-                        textBox1.Text = textBox1.Text + "\r\n Weight = " + OrderInfo.Weight.ToString();
-                        textBox1.Text = textBox1.Text + "\r\n WeightOrder = " + OrderInfo.WeightOrder.ToString();
-                        textBox1.Text = textBox1.Text + "\r\n OrderInfo *************************";
-                        */
-                        InvokeMegaService(() => { StoreApi.EmptyBasket(); });
-                        authClient.Close();
+                        BI = soap.GetBasketDetails(customer);
+                        soap.DeleteFromBasket(customer, BI);
+                       
                     }
-                    if (authClient!=null)
-                    {
-                        authClient.Close();
-                    }
+                    
                     myConnection.Close();
                 }
                 catch (SqlException exp)
@@ -458,8 +305,8 @@ namespace CreateOrderEmex
                     textBox1.Text = textBox1.Text + "\r\n Ошибка!!! \r\n"+ err;
 
                     sqlcomplete.CommandText = "exec dbo.p_SupplierOrder_Export_Complete @HeadId=" + headid + ",@ResultCode = 1 ,@ResultText='Exception CreateOrder'";
-                    drcomplete = sqlcomplete.ExecuteReader();
-                    drcomplete.Close();
+                  //  drcomplete = sqlcomplete.ExecuteReader();
+                  // drcomplete.Close();
                     myConnection.Close();
                  //   SendMail("Error CreateOrderEmex", err);
                 }
@@ -473,8 +320,8 @@ namespace CreateOrderEmex
                         if (headid.Length > 0)
                         {
                             sqlcomplete.CommandText = "exec dbo.p_SupplierOrder_Export_Complete @HeadId=" + headid + ",@ResultCode = 1 ,@ResultText='Exception CreateOrder'";
-                            drcomplete = sqlcomplete.ExecuteReader();
-                            drcomplete.Close();
+                        //    drcomplete = sqlcomplete.ExecuteReader();
+                        //    drcomplete.Close();
                             myConnection.Close();
                         }
                     }
@@ -505,60 +352,10 @@ namespace CreateOrderEmex
             bExit.Enabled = true;
           
         }
+       
 
-        private static string AuthenticateMega()
-        {
-            string ret = null;
-            try
-            {
-                using (OperationContextScope scope = new OperationContextScope(authClient.InnerChannel))
-                {
-                    if (authClient.Login(MegaLogin, MegaPassword, "", true))
-                    {
-                        MessageProperties properties = OperationContext.Current.IncomingMessageProperties;
-                        HttpResponseMessageProperty responseProperty =
-                            (HttpResponseMessageProperty)properties[HttpResponseMessageProperty.Name];
-                        string cookieHeader = responseProperty.Headers[HttpResponseHeader.SetCookie];
-                        Match match = Regex.Match(cookieHeader, @".*\.ASPXAUTH=(\w+);.*");
-                        ret = match.Groups[1].Value;
-                    }
-                }
-              
-            }
-            catch (Exception exp) {
-                MessageBox.Show(exp.Message.ToString());
-            }
-            return ret;
-        }
-
-        private static  ServiceReference2.StoreApiClient _storeApi;
-        
-        public static ServiceReference2.StoreApiClient StoreApi
-        {
-            get
-            {
-                if (null == _storeApi)
-                {
-                    _storeApi = new ServiceReference2.StoreApiClient();
-                }
-
-                return _storeApi;
-            }
-        }
-
-        private static void InvokeMegaService(Action action)
-        {
-          
-            using (OperationContextScope scope = new OperationContextScope(StoreApi.InnerChannel))
-            {
-                var prop = new HttpRequestMessageProperty();
-                prop.Headers.Add(HttpRequestHeader.Cookie, String.Format(".ASPXAUTH={0}; Lang={1}", ticketMega, Thread.CurrentThread.CurrentCulture.Name));
-                OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = prop;
-
-                action();
-            }
-          
-        }
+      
+      
 
         private void bConnect_Click(object sender, EventArgs e)
         {
@@ -623,6 +420,7 @@ namespace CreateOrderEmex
 
         private void bStart_Click(object sender, EventArgs e)
         {
+               
             CreateOrder();
         }
 
@@ -633,6 +431,8 @@ namespace CreateOrderEmex
                 CreateOrder();
             }
         }
+
+       
 
     }
 }

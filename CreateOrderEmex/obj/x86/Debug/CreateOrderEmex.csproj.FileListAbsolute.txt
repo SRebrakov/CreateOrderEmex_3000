@@ -22,3 +22,15 @@ C:\EMEX\CreateOrderEmex\EMEXUAEB\CreateOrderEmex.exe
 C:\EMEX\CreateOrderEmex\EMEXUAEB\CreateOrderEmex.pdb
 C:\EMEX\CreateOrderEmex\CreateOrderEmex\obj\x86\Debug\CreateOrderEmex.csproj.GenerateResource.Cache
 C:\EMEX\CreateOrderEmex\CreateOrderEmex\obj\x86\Debug\CreateOrderEmex.csprojResolveAssemblyReference.cache
+C:\Users\Domovoy\source\repos\CreateOrderEmex_3000\EMEXUAEB\NLog.config
+C:\Users\Domovoy\source\repos\CreateOrderEmex_3000\EMEXUAEB\CreateOrderEmex.exe.config
+C:\Users\Domovoy\source\repos\CreateOrderEmex_3000\EMEXUAEB\CreateOrderEmex.exe
+C:\Users\Domovoy\source\repos\CreateOrderEmex_3000\EMEXUAEB\CreateOrderEmex.pdb
+C:\Users\Domovoy\source\repos\CreateOrderEmex_3000\CreateOrderEmex\obj\x86\Debug\CreateOrderEmex.csproj.AssemblyReference.cache
+C:\Users\Domovoy\source\repos\CreateOrderEmex_3000\CreateOrderEmex\obj\x86\Debug\CreateOrderEmex.MainForm.resources
+C:\Users\Domovoy\source\repos\CreateOrderEmex_3000\CreateOrderEmex\obj\x86\Debug\CreateOrderEmex.Properties.Resources.resources
+C:\Users\Domovoy\source\repos\CreateOrderEmex_3000\CreateOrderEmex\obj\x86\Debug\CreateOrderEmex.csproj.GenerateResource.cache
+C:\Users\Domovoy\source\repos\CreateOrderEmex_3000\CreateOrderEmex\obj\x86\Debug\CreateOrderEmex.csproj.CoreCompileInputs.cache
+C:\Users\Domovoy\source\repos\CreateOrderEmex_3000\CreateOrderEmex\obj\x86\Debug\CreateOrderEmex.csproj.CopyComplete
+C:\Users\Domovoy\source\repos\CreateOrderEmex_3000\CreateOrderEmex\obj\x86\Debug\CreateOrderEmex.exe
+C:\Users\Domovoy\source\repos\CreateOrderEmex_3000\CreateOrderEmex\obj\x86\Debug\CreateOrderEmex.pdb
